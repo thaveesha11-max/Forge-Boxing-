@@ -8,13 +8,12 @@ A fast, hand-built marketing site for **Forge**, a boxing gym. Seven pages plus 
 
 | Page | What it does |
 | --- | --- |
-| `index.html` | Home. Hero with space for your home photo and an interactive heavy bag, Who we are, How it works with a membership button, Boxing / Fitness / Parking / Showers icons, a live "coming up" session board and a coach feature. |
-| `schedule.html` | Timetable. Day cards with morning, afternoon and evening sessions, a to-scale "week at a glance" chart, and live "on now" highlighting. |
+| `index.html` | Home: photo hero with the interactive heavy bag, Who we are, How it works with a membership button, Boxing / Fitness / Parking / Showers icons, live session board, coach feature. |
+| `schedule.html` | Timetable: day cards and a to-scale week chart, with live "on now" highlighting. |
 | `coach.html` | Meet the Coach: Asanka Rajapakshe's qualifications, career highlights and a photo gallery. |
-| `kids.html` | Kids classes, with a contact call to action. |
-| `membership.html` | 8 days (LKR 5,000), 12 days (LKR 7,000) and 12+ days (LKR 10,000) a month, plus kids and private sessions on request. |
-| `contact.html` | Enquiry form (preselects the plan from the button the visitor clicked). |
-| `404.html` | "Beat the count" error page. |
+| `membership.html` | Plans (8 / 12 / 12+ days a month), kids classes, private sessions, the contact form and FAQ. Buttons elsewhere link to `membership.html#kids` and `#contact`. |
+
+`404.html` is the error page.
 
 Every page opens with a cosmic, blood-red "Let the pain forge you" preloader (about 4 seconds, once per visit).
 
@@ -55,7 +54,7 @@ The content is written to be realistic, but the business details are placeholder
 | `www.forgeboxing.example` (domain) | `<head>` of every page, the JSON-LD block in `index.html`, `sitemap.xml`, `robots.txt` |
 | `hello@forgeboxing.example` | `assets/js/data.js`, footer, contact page, JSON-LD |
 | `+94 77 000 0000` / `+94770000000` | `assets/js/data.js`, footer, mobile menu, contact page, membership FAQ, timetable page, JSON-LD |
-| Address | Not on the site yet. Add it to the footer and contact page, and to `address` in the JSON-LD in `index.html` |
+| Address | Not on the site yet. Add it to the footer and the contact section of `membership.html`, and to `address` in the JSON-LD in `index.html` |
 | Social links | Footer (currently point at the Instagram, YouTube and Facebook home pages) |
 
 Everything else (copy, class structure, FAQ answers) is ready to use, but read it through and adjust anything that doesn't match how you run the gym.
@@ -80,7 +79,7 @@ Any service that accepts a JSON `POST` works (Formspree, Basin, Getform, your ow
 
 **Timetable.** Edit `FORGE.hours` in `assets/js/data.js`. Each day lists its sessions as `["start", "end"]` in 24-hour time. The timetable page, the home page board, the live "training now" status and the session counts all update from it. Also update the static hours list in the footer, home and contact pages (search for `Mon · Wed · Fri`).
 
-**Prices.** Edit the plan cards in `membership.html` and the options in the `contact.html` form.
+**Prices.** Edit the plan cards in `membership.html` and the options in the contact form on `membership.html`.
 
 **Contact form.** Paste a form endpoint (e.g. Formspree) into `formEndpoint` in `assets/js/data.js`. Left empty, the form opens the visitor's email app with the message filled in.
 

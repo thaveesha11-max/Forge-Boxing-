@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Membership & Pricing | Forge Boxing Club</title>
-<meta name="description" content="Simple boxing memberships with no joining fee. Pay monthly or save 15% yearly. Drop-ins, class packs, youth and private coaching.">
+<title>Membership | Forge Boxing & Fitness Academy</title>
+<meta name="description" content="No-contract boxing memberships: 8 days LKR 5,000, 12 days LKR 7,000, 12+ days LKR 10,000 a month. Kids and private sessions on request.">
 <meta name="theme-color" content="#0e1215">
 <link rel="canonical" href="https://www.forgeboxing.example/membership.html">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Forge Boxing Club">
-<meta property="og:title" content="Membership & Pricing | Forge Boxing Club">
-<meta property="og:description" content="Simple boxing memberships with no joining fee. Pay monthly or save 15% yearly. Drop-ins, class packs, youth and private coaching.">
+<meta property="og:site_name" content="Forge Boxing & Fitness Academy">
+<meta property="og:title" content="Membership | Forge Boxing & Fitness Academy">
+<meta property="og:description" content="No-contract boxing memberships: 8 days LKR 5,000, 12 days LKR 7,000, 12+ days LKR 10,000 a month. Kids and private sessions on request.">
 <meta property="og:url" content="https://www.forgeboxing.example/membership.html">
 <meta property="og:image" content="https://www.forgeboxing.example/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -20,14 +20,16 @@
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/big-shoulders-stencil.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/big-shoulders.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 <div class="preloader" data-preloader aria-hidden="true">
+  <canvas class="pl-stars"></canvas>
+  <div class="pl-nebula"></div>
   <div class="preloader-inner">
-    <p class="preloader-text">Let the pain <span>forge</span> you</p>
+    <p class="pl-text"><span class="pl-word">Let the pain</span><span class="pl-word pl-big">Forge</span><span class="pl-word">you</span></p>
     <svg class="preloader-forge" viewBox="0 0 120 80" focusable="false">
       <g class="pl-sparks" stroke="#ff3b2f" stroke-width="1.6" stroke-linecap="round">
         <path d="M58 36l-8-10"/><path d="M62 36l6-12"/><path d="M55 38l-12-4"/><path d="M65 38l12-5"/><path d="M60 35v-12"/>
@@ -39,6 +41,7 @@
       </g>
       <path transform="translate(33 38) scale(1.1)" fill="#56616c" d="M2 15.5C8 15.5 11 14 15 14H46V20H38C35 20 33 22 33 25V28L38 33V37H12V33L17 28V25C17 22 15 21 12 20.5C8 20 5 18 2 15.5Z"/>
     </svg>
+    <div class="pl-bar"><i></i></div>
   </div>
 </div>
 <script>try{if(sessionStorage.getItem("forge-intro"))document.documentElement.classList.add("no-preloader");sessionStorage.setItem("forge-intro","1")}catch(e){}</script>
@@ -46,21 +49,21 @@
 
 <header class="site-header" data-header>
   <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="Forge Boxing Club home">
+    <a class="brand" href="index.html" aria-label="Forge Boxing & Fitness Academy home">
       <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="currentColor" d="M2 15.5C8 15.5 11 14 15 14H46V20H38C35 20 33 22 33 25V28L38 33V37H12V33L17 28V25C17 22 15 21 12 20.5C8 20 5 18 2 15.5Z"/><path fill="#ffb43f" d="M30 1L31.6 5.4L36 7L31.6 8.6L30 13L28.4 8.6L24 7L28.4 5.4Z"/></svg>
-      <span class="brand-word">Forge<span class="brand-sub">Boxing Club</span></span>
+      <span class="brand-word">Forge<span class="brand-sub">Fitness Academy</span></span>
     </a>
     <nav aria-label="Main">
       <ul class="nav-links">
-        <li><a href="programs.html">Programs</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="schedule.html">Timetable</a></li>
-        <li><a href="coaches.html">Coaches</a></li>
+        <li><a href="coach.html">Meet the Coach</a></li>
+        <li><a href="kids.html">Kids Classes</a></li>
         <li><a href="membership.html" aria-current="page">Membership</a></li>
-        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
     <div class="nav-end">
-      <a class="btn btn-primary btn-sm" href="contact.html">Free class</a>
+      <a class="btn btn-primary btn-sm" href="membership.html">Join now</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><span></span><b class="sr-only">Open menu</b></button>
     </div>
   </div>
@@ -70,17 +73,17 @@
   <nav aria-label="Mobile">
     <ol>
       <li><a href="index.html">Home<span aria-hidden="true">→</span></a></li>
-      <li><a href="programs.html">Programs<span aria-hidden="true">→</span></a></li>
       <li><a href="schedule.html">Timetable<span aria-hidden="true">→</span></a></li>
-      <li><a href="coaches.html">Coaches<span aria-hidden="true">→</span></a></li>
+      <li><a href="coach.html">Meet the Coach<span aria-hidden="true">→</span></a></li>
+      <li><a href="kids.html">Kids Classes<span aria-hidden="true">→</span></a></li>
       <li><a href="membership.html" aria-current="page">Membership<span aria-hidden="true">→</span></a></li>
-      <li><a href="about.html">About<span aria-hidden="true">→</span></a></li>
+      <li><a href="contact.html">Contact<span aria-hidden="true">→</span></a></li>
     </ol>
   </nav>
   <div class="mobile-menu-foot">
     <span data-open-status></span>
-    <p>88 Foundry Road, Unit 4<br><a href="tel:+15550104477">(555) 010-4477</a></p>
-    <a class="btn btn-primary btn-block" href="contact.html">Book your free class <span class="arrow" aria-hidden="true">→</span></a>
+    <p><a href="tel:+94770000000">+94 77 000 0000</a></p>
+    <a class="btn btn-primary btn-block" href="membership.html">See memberships <span class="arrow" aria-hidden="true">→</span></a>
   </div>
 </div>
 
@@ -91,133 +94,44 @@
       <div class="page-hero-grid">
         <div>
           <span class="eyebrow label">Membership</span>
-          <h1 class="display d-xl" id="page-title">Pick your plan.</h1>
+          <h1 class="display d-xl" id="page-title">Pick your days.</h1>
         </div>
-        <div class="page-hero-aside">
-          <p class="lead">No joining fee and no contract. Pay monthly and cancel with 30 days’ notice, or pay yearly and save 15%.</p>
-          <a class="link-arrow" href="#faq">Common questions <span class="arrow" aria-hidden="true">→</span></a>
-        </div>
+        <div class="page-hero-aside"><p class="lead">Simple memberships with no contract. Renew whenever you want. Every day counts as one visit to any session on the timetable.</p><a class="link-arrow" href="#faq">Common questions <span class="arrow" aria-hidden="true">→</span></a></div>
       </div>
     </div>
   </section>
 
   <section class="section-tight" id="plans" aria-labelledby="plans-title">
     <div class="wrap stack" style="--stack: 40px">
-      <div class="tt-controls" style="margin: 0">
-        <h2 class="display d-m" id="plans-title">Memberships</h2>
-        <div class="billing" data-billing role="group" aria-label="Billing period">
-          <button type="button" data-cycle="monthly" aria-pressed="true">Monthly</button>
-          <button type="button" data-cycle="annual" aria-pressed="false">Yearly <span class="save">Save 15%</span></button>
-        </div>
-      </div>
-
-      <div class="plans" data-plans>
+      <h2 class="display d-m" id="plans-title">Monthly memberships</h2>
+      <div class="plans">
         <article class="plan">
-          <div class="plan-name"><h3 class="display d-s">Forge 8</h3><span class="tag">2× a week</span></div>
-          <div class="plan-price"><span class="cur">$</span><span class="amt" data-monthly="129" data-annual="110">129</span><span class="per">per<br>month</span></div>
-          <p class="plan-note" data-monthly="Billed monthly. Cancel with 30 days’ notice." data-annual="$1,320 billed yearly. You save $228.">Billed monthly. Cancel with 30 days’ notice.</p>
-          <ul role="list">
-            <li>8 classes a month</li>
-            <li>Foundations, Conditioning, Technical and Women’s Boxing</li>
-            <li>Book up to 7 days ahead</li>
-            <li>Lockers and showers</li>
-            <li class="no">Open Gym</li>
-            <li class="no">Sparring Lab</li>
-          </ul>
-          <a class="btn btn-steel btn-block" href="contact.html?plan=forge8">Start with a free class</a>
+          <div class="plan-name"><h3 class="display d-s">Starter</h3><span class="tag">2× a week</span></div>
+          <div class="per-days">8<small>days / month</small></div>
+          <div class="plan-price"><span class="cur">LKR</span><span class="amt">5,000</span><span class="per">per<br>month</span></div>
+          <div class="stack" style="--stack: 8px"><div class="cal" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p class="cal-cap">8 of 30 days</p></div>
+          <a class="btn btn-steel btn-block" href="contact.html?interest=m8">Join Starter</a>
         </article>
-
         <article class="plan is-featured">
-          <span class="plan-flag tag tag-hot">Most members pick this</span>
-          <div class="plan-name"><h3 class="display d-s">Unlimited</h3><span class="tag">Every day</span></div>
-          <div class="plan-price"><span class="cur">$</span><span class="amt" data-monthly="179" data-annual="152">179</span><span class="per">per<br>month</span></div>
-          <p class="plan-note" data-monthly="Billed monthly. Cancel with 30 days’ notice." data-annual="$1,824 billed yearly. You save $324.">Billed monthly. Cancel with 30 days’ notice.</p>
-          <ul role="list">
-            <li>Unlimited classes, every program</li>
-            <li>Open Gym on weekends</li>
-            <li>Sparring Lab, with coach approval</li>
-            <li>One guest pass a month</li>
-            <li>10% off private coaching</li>
-            <li>Book up to 14 days ahead</li>
-          </ul>
-          <a class="btn btn-primary btn-block" href="contact.html?plan=unlimited">Start with a free class <span class="arrow" aria-hidden="true">→</span></a>
+          <span class="plan-flag tag tag-hot">Most popular</span>
+          <div class="plan-name"><h3 class="display d-s">Regular</h3><span class="tag">3× a week</span></div>
+          <div class="per-days">12<small>days / month</small></div>
+          <div class="plan-price"><span class="cur">LKR</span><span class="amt">7,000</span><span class="per">per<br>month</span></div>
+          <div class="stack" style="--stack: 8px"><div class="cal" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p class="cal-cap">12 of 30 days</p></div>
+          <a class="btn btn-primary btn-block" href="contact.html?interest=m12">Join Regular <span class="arrow" aria-hidden="true">→</span></a>
         </article>
-
         <article class="plan">
-          <div class="plan-name"><h3 class="display d-s">Fight Team</h3><span class="tag">Invite only</span></div>
-          <div class="plan-price"><span class="cur">$</span><span class="amt" data-monthly="249" data-annual="212">249</span><span class="per">per<br>month</span></div>
-          <p class="plan-note" data-monthly="Billed monthly. Cancel with 30 days’ notice." data-annual="$2,544 billed yearly. You save $444.">Billed monthly. Cancel with 30 days’ notice.</p>
-          <ul role="list">
-            <li>Everything in Unlimited</li>
-            <li>Friday Fight Team sessions</li>
-            <li>Two private sessions a month</li>
-            <li>Eight-week fight camp plans</li>
-            <li>Bout registration and corner work</li>
-            <li>Two guest passes a month</li>
-          </ul>
-          <a class="btn btn-steel btn-block" href="programs.html#fightteam">How to get invited</a>
+          <div class="plan-name"><h3 class="display d-s">Unlimited</h3><span class="tag">Every session</span></div>
+          <div class="per-days">12+<small>days / month</small></div>
+          <div class="plan-price"><span class="cur">LKR</span><span class="amt">10,000</span><span class="per">per<br>month</span></div>
+          <div class="stack" style="--stack: 8px"><div class="cal" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div><p class="cal-cap">Train as often as you like</p></div>
+          <a class="btn btn-steel btn-block" href="contact.html?interest=m12plus">Join Unlimited</a>
         </article>
       </div>
 
-      <div class="extras">
-        <div class="extra"><span class="label muted">Drop-in</span><span class="price">$30<small>/class</small></span><p>No membership needed. Good for visitors and anyone testing the waters.</p></div>
-        <div class="extra"><span class="label muted">10-class pack</span><span class="price">$250</span><p>Valid for three months. Any class except Sparring Lab and Fight Team.</p></div>
-        <div class="extra"><span class="label muted">Youth</span><span class="price">$99<small>/mo</small></span><p>Up to four Youth Boxing classes a week. $15 off for each sibling.</p></div>
-        <div class="extra"><span class="label muted">Private 1:1</span><span class="price">$85<small>/session</small></span><p>Or five sessions for $395. Train with a friend for $110 a session.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-tight bg-raised" aria-labelledby="includes-title">
-    <div class="wrap stack" style="--stack: 48px">
-      <h2 class="display d-m" id="includes-title">Every membership includes</h2>
-      <div class="includes">
-        <div class="include">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="12" r="7"/><circle cx="9" cy="12" r="2.5"/><path d="M16 12h6v6H9"/></svg>
-          <h3>Hand wraps on day one</h3>
-          <p>A pair of Forge wraps is yours at your first class. We’ll teach you to tie them.</p>
-        </div>
-        <div class="include">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2.5h6V4M8.5 12.5l2.5 2.5 4.5-5"/></svg>
-          <h3>Coach check-ins</h3>
-          <p>Every eight weeks a coach reviews your progress and sets your next goal.</p>
-        </div>
-        <div class="include">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M5 12h14M9 7h2M9 16h2"/></svg>
-          <h3>Lockers and showers</h3>
-          <p>Day lockers, hot showers and hair dryers. Bring a padlock or borrow one at the desk.</p>
-        </div>
-        <div class="include">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 9v6M14 9v6"/></svg>
-          <h3>Freeze when you need to</h3>
-          <p>Pause for up to two months a year for travel, injury or anything else.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-tight" aria-labelledby="compare-title">
-    <div class="wrap stack" style="--stack: 32px">
-      <h2 class="display d-m" id="compare-title">Compare plans</h2>
-      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="compare-title">
-        <table class="compare">
-          <thead>
-            <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col">Forge 8</th><th scope="col" class="is-featured">Unlimited</th><th scope="col">Fight Team</th></tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">Classes per month</th><td class="tnum">8</td><td class="is-featured">Unlimited</td><td>Unlimited</td></tr>
-            <tr><th scope="row">Foundations &amp; Fight Conditioning</th><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td class="yes is-featured"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-            <tr><th scope="row">Technical &amp; Women’s Boxing</th><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td class="yes is-featured"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-            <tr><th scope="row">Open Gym</th><td class="dash"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="yes is-featured"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-            <tr><th scope="row">Sparring Lab (coach approval)</th><td class="dash"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="yes is-featured"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-            <tr><th scope="row">Fight Team sessions</th><td class="dash"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="dash is-featured"><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-            <tr><th scope="row">Private sessions included</th><td class="dash"><span aria-hidden="true">—</span><span class="sr-only">None</span></td><td class="dash is-featured"><span aria-hidden="true">—</span><span class="sr-only">None</span></td><td>2 a month</td></tr>
-            <tr><th scope="row">Private coaching discount</th><td class="dash"><span aria-hidden="true">—</span><span class="sr-only">None</span></td><td class="is-featured">10%</td><td>20%</td></tr>
-            <tr><th scope="row">Guest passes</th><td class="dash"><span aria-hidden="true">—</span><span class="sr-only">None</span></td><td class="is-featured">1 a month</td><td>2 a month</td></tr>
-            <tr><th scope="row">Book ahead</th><td>7 days</td><td class="is-featured">14 days</td><td>14 days</td></tr>
-            <tr><th scope="row">Freeze</th><td>2 months a year</td><td class="is-featured">2 months a year</td><td>2 months a year</td></tr>
-          </tbody>
-        </table>
+      <div class="plans-contact">
+        <a class="pc" href="kids.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="6" r="2.5"/><circle cx="16.5" cy="8" r="2"/><path d="M4 21v-5a4 4 0 0 1 8 0v5M13 21v-4a3.5 3.5 0 0 1 7 0v4"/></svg></span><div><h3>Kids membership</h3><p>Classes for young boxers. Contact us for times and pricing.</p></div><span class="btn btn-steel btn-sm">Contact</span></a>
+        <a class="pc" href="contact.html?interest=private"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></span><div><h3>Private sessions</h3><p>One-to-one coaching with Coach Asanka. Contact us to book.</p></div><span class="btn btn-steel btn-sm">Contact</span></a>
       </div>
     </div>
   </section>
@@ -226,105 +140,89 @@
     <div class="wrap two-col">
       <div class="stack">
         <span class="eyebrow label">Questions</span>
-        <h2 class="display d-l" id="faq-title">Before you sign up.</h2>
-        <p class="muted">Something we haven’t covered? Call <a href="tel:+15550104477">(555) 010-4477</a> or ask at the desk.</p>
+        <h2 class="display d-l" id="faq-title">Before you join.</h2>
+        <p class="muted">Anything else? Call <a href="tel:+94770000000">+94 77 000 0000</a> or <a href="contact.html">send us a message</a>.</p>
       </div>
       <div class="faq">
-        <details open>
-          <summary>Do I need any boxing experience?</summary>
-          <div class="answer"><p>No. Most of our members had never thrown a punch before their first class. Foundations is built for complete beginners, and a coach will look after you from the moment you arrive.</p></div>
-        </details>
-        <details>
-          <summary>Will I have to spar?</summary>
-          <div class="answer"><p>Only if you want to. Sparring happens in one class, Sparring Lab, and you need a coach’s approval to join it. Every other class is pads, bags and drills with no contact.</p></div>
-        </details>
-        <details>
-          <summary>What should I bring to my first class?</summary>
-          <div class="answer"><p>Water, trainers with flat soles and clothes you can sweat in. We lend gloves and wraps for free until you buy your own.</p></div>
-        </details>
-        <details>
-          <summary>How fit do I need to be?</summary>
-          <div class="answer"><p>You don’t need to be fit to start. Coming is how you get fit. Every drill has an easier and a harder version, and coaches will scale anything you need.</p></div>
-        </details>
-        <details>
-          <summary>Can I freeze or cancel my membership?</summary>
-          <div class="answer"><p>You can freeze for up to two months a year. Monthly plans cancel with 30 days’ notice and no fees.</p><p>Yearly plans are paid up front. You can freeze them, and you can cancel for a full refund within the first 14 days.</p></div>
-        </details>
-        <details>
-          <summary>Is there a minimum age?</summary>
-          <div class="answer"><p>Youth Boxing is for ages 8 to 15. Adult classes are for 16 and over, and 16 and 17 year olds need a parent to sign the waiver.</p></div>
-        </details>
-        <details>
-          <summary>Do you offer discounts?</summary>
-          <div class="answer"><p>Students, teachers and first responders get 10% off any membership. Siblings save $15 a month on Youth. Ask at the desk with ID.</p></div>
-        </details>
-        <details>
-          <summary>Can I bring a friend?</summary>
-          <div class="answer"><p>Yes. Anyone’s first class is free. Unlimited members also get a monthly guest pass, and Fight Team members get two.</p></div>
-        </details>
+        <details open><summary>Is there a contract?</summary><div class="answer"><p>No. Memberships run month to month. Renew whenever you want, and stop whenever you need to.</p></div></details>
+        <details><summary>What counts as a day?</summary><div class="answer"><p>One visit to any session on the timetable. Starter gives you 8 of those a month, Regular gives you 12, and Unlimited has no cap.</p></div></details>
+        <details><summary>Do I need boxing experience?</summary><div class="answer"><p>No. Forge welcomes anyone with a genuine interest in the sport. The coach will build you up from the basics.</p></div></details>
+        <details><summary>What should I bring?</summary><div class="answer"><p>Water, a towel, trainers and clothes you can sweat in. Ask us about gloves and hand wraps before your first session.</p></div></details>
+        <details><summary>How do kids and private sessions work?</summary><div class="answer"><p>Both are arranged directly with us. <a href="contact.html">Get in touch</a> and we’ll share times and pricing.</p></div></details>
       </div>
     </div>
   </section>
 
   <section class="fire" aria-labelledby="fire-title">
     <div class="wrap fire-grid">
-      <h2 class="display d-xl" id="fire-title">Try before you pick.</h2>
+      <h2 class="display d-xl" id="fire-title">Let the pain forge you.</h2>
       <div class="fire-aside">
-        <p>Your first class is free. Train once, then choose a plan with a coach who has seen you box.</p>
-        <a class="btn btn-ink" href="contact.html">Book your free class <span class="arrow" aria-hidden="true">→</span></a>
+        <p>Pick a membership and we’ll see you on the floor.</p>
+        <a class="btn btn-ink" href="contact.html">Get started <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-cta">
+      <p class="footer-slogan">Let the pain<br><span>forge</span> you.</p>
+      <div class="footer-cta-side">
+        <p>No contracts. Pick a membership, show up, and let the work do the rest.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="membership.html">Join Forge <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-steel" href="contact.html">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <a class="brand" href="index.html" aria-label="Forge Boxing Club home">
+      <a class="brand" href="index.html" aria-label="Forge Boxing & Fitness Academy home">
         <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="currentColor" d="M2 15.5C8 15.5 11 14 15 14H46V20H38C35 20 33 22 33 25V28L38 33V37H12V33L17 28V25C17 22 15 21 12 20.5C8 20 5 18 2 15.5Z"/><path fill="#ffb43f" d="M30 1L31.6 5.4L36 7L31.6 8.6L30 13L28.4 8.6L24 7L28.4 5.4Z"/></svg>
-        <span class="brand-word">Forge<span class="brand-sub">Boxing Club</span></span>
+        <span class="brand-word">Forge<span class="brand-sub">Fitness Academy</span></span>
       </a>
-      <p>A boxing club for first-timers, fitness chasers and fighters. Coached properly, every round, since 2019.</p>
+      <p>Boxing and fitness for anyone with a genuine interest in the sport. Coached by four-time national champion Asanka Rajapakshe.</p>
       <div class="socials">
         <a href="https://www.instagram.com/" aria-label="Forge on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://www.youtube.com/" aria-label="Forge on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9.2l5 2.8-5 2.8z" fill="currentColor" stroke="none"/></svg></a>
         <a href="https://www.facebook.com/" aria-label="Forge on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M14 21v-7h3l.5-3.5H14V8.8c0-1 .4-1.8 1.9-1.8H17.6V4a17 17 0 0 0-2.6-.2c-2.8 0-4.5 1.6-4.5 4.6v2.1H7.5V14h3v7"/></svg></a>
+        <a href="https://wa.me/94770000000" aria-label="Message Forge on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.8z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a4 4 0 0 1-2-2l1-1-1-2z" fill="currentColor" stroke="none"/></svg></a>
       </div>
     </div>
     <div class="footer-col">
-      <h2 class="label">Visit</h2>
-      <address>88 Foundry Road, Unit 4<br>Northside</address>
-      <ul>
-        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=88+Foundry+Road" rel="noopener">Get directions →</a></li>
-        <li><a href="tel:+15550104477">(555) 010-4477</a></li>
-        <li><a href="mailto:hello@forgeboxing.example">hello@forgeboxing.example</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h2 class="label">Hours</h2>
+      <h2 class="label">Training hours</h2>
       <dl class="hours">
-        <div data-days="1,2,3,4,5"><dt>Mon–Fri</dt><dd>6 AM – 9 PM</dd></div>
-        <div data-days="6"><dt>Saturday</dt><dd>8 AM – 2 PM</dd></div>
-        <div data-days="0"><dt>Sunday</dt><dd>9 AM – 12 PM</dd></div>
-      </dl>
+          <div data-days="1,3,5"><dt>Mon · Wed · Fri</dt><dd>10–12 AM · 7–9 PM</dd></div>
+          <div data-days="2,4"><dt>Tue · Thu</dt><dd>10 AM – 12 PM</dd></div>
+          <div data-days="6"><dt>Saturday</dt><dd>4 – 6 PM</dd></div>
+          <div data-days="0"><dt>Sunday</dt><dd>Rest day</dd></div>
+        </dl>
       <span data-open-status></span>
     </div>
     <div class="footer-col">
       <h2 class="label">Explore</h2>
       <ul>
-        <li><a href="programs.html">Programs</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="schedule.html">Timetable</a></li>
-        <li><a href="coaches.html">Coaches</a></li>
+        <li><a href="coach.html">Meet the Coach</a></li>
+        <li><a href="kids.html">Kids Classes</a></li>
         <li><a href="membership.html">Membership</a></li>
-        <li><a href="about.html">About the club</a></li>
-        <li><a href="contact.html">Book a free class</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h2 class="label">Get in touch</h2>
+      <ul>
+        <li><a href="tel:+94770000000">+94 77 000 0000</a></li>
+        <li><a href="mailto:hello@forgeboxing.example">hello@forgeboxing.example</a></li>
+        <li><a href="contact.html">Send a message →</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-mark" aria-hidden="true">Forge</div>
   <div class="wrap">
     <div class="footer-base">
-      <span>© <span data-year>2026</span> Forge Boxing Club. All rights reserved.</span>
+      <span>© <span data-year>2026</span> Forge Boxing & Fitness Academy. All rights reserved.</span>
       <a href="#main">Back to top ↑</a>
     </div>
   </div>
@@ -332,5 +230,6 @@
 
 <script src="assets/js/data.js" defer></script>
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/preloader.js" defer></script>
 </body>
 </html>

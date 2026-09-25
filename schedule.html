@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Timetable | Forge Boxing Club</title>
-<meta name="description" content="40 boxing classes a week, seven days a week. Filter by program or beginner-friendly classes and book your first one free.">
+<title>Timetable | Forge Boxing & Fitness Academy</title>
+<meta name="description" content="Nine training sessions a week: weekday mornings, Monday, Wednesday and Friday evenings, and Saturday afternoon.">
 <meta name="theme-color" content="#0e1215">
 <link rel="canonical" href="https://www.forgeboxing.example/schedule.html">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Forge Boxing Club">
-<meta property="og:title" content="Timetable | Forge Boxing Club">
-<meta property="og:description" content="40 boxing classes a week, seven days a week. Filter by program or beginner-friendly classes and book your first one free.">
+<meta property="og:site_name" content="Forge Boxing & Fitness Academy">
+<meta property="og:title" content="Timetable | Forge Boxing & Fitness Academy">
+<meta property="og:description" content="Nine training sessions a week: weekday mornings, Monday, Wednesday and Friday evenings, and Saturday afternoon.">
 <meta property="og:url" content="https://www.forgeboxing.example/schedule.html">
 <meta property="og:image" content="https://www.forgeboxing.example/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -20,14 +20,16 @@
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/big-shoulders-stencil.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/big-shoulders.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 <div class="preloader" data-preloader aria-hidden="true">
+  <canvas class="pl-stars"></canvas>
+  <div class="pl-nebula"></div>
   <div class="preloader-inner">
-    <p class="preloader-text">Let the pain <span>forge</span> you</p>
+    <p class="pl-text"><span class="pl-word">Let the pain</span><span class="pl-word pl-big">Forge</span><span class="pl-word">you</span></p>
     <svg class="preloader-forge" viewBox="0 0 120 80" focusable="false">
       <g class="pl-sparks" stroke="#ff3b2f" stroke-width="1.6" stroke-linecap="round">
         <path d="M58 36l-8-10"/><path d="M62 36l6-12"/><path d="M55 38l-12-4"/><path d="M65 38l12-5"/><path d="M60 35v-12"/>
@@ -39,6 +41,7 @@
       </g>
       <path transform="translate(33 38) scale(1.1)" fill="#56616c" d="M2 15.5C8 15.5 11 14 15 14H46V20H38C35 20 33 22 33 25V28L38 33V37H12V33L17 28V25C17 22 15 21 12 20.5C8 20 5 18 2 15.5Z"/>
     </svg>
+    <div class="pl-bar"><i></i></div>
   </div>
 </div>
 <script>try{if(sessionStorage.getItem("forge-intro"))document.documentElement.classList.add("no-preloader");sessionStorage.setItem("forge-intro","1")}catch(e){}</script>
@@ -46,21 +49,21 @@
 
 <header class="site-header" data-header>
   <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="Forge Boxing Club home">
+    <a class="brand" href="index.html" aria-label="Forge Boxing & Fitness Academy home">
       <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="currentColor" d="M2 15.5C8 15.5 11 14 15 14H46V20H38C35 20 33 22 33 25V28L38 33V37H12V33L17 28V25C17 22 15 21 12 20.5C8 20 5 18 2 15.5Z"/><path fill="#ffb43f" d="M30 1L31.6 5.4L36 7L31.6 8.6L30 13L28.4 8.6L24 7L28.4 5.4Z"/></svg>
-      <span class="brand-word">Forge<span class="brand-sub">Boxing Club</span></span>
+      <span class="brand-word">Forge<span class="brand-sub">Fitness Academy</span></span>
     </a>
     <nav aria-label="Main">
       <ul class="nav-links">
-        <li><a href="programs.html">Programs</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="schedule.html" aria-current="page">Timetable</a></li>
-        <li><a href="coaches.html">Coaches</a></li>
+        <li><a href="coach.html">Meet the Coach</a></li>
+        <li><a href="kids.html">Kids Classes</a></li>
         <li><a href="membership.html">Membership</a></li>
-        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
     <div class="nav-end">
-      <a class="btn btn-primary btn-sm" href="contact.html">Free class</a>
+      <a class="btn btn-primary btn-sm" href="membership.html">Join now</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><span></span><b class="sr-only">Open menu</b></button>
     </div>
   </div>
@@ -70,17 +73,17 @@
   <nav aria-label="Mobile">
     <ol>
       <li><a href="index.html">Home<span aria-hidden="true">→</span></a></li>
-      <li><a href="programs.html">Programs<span aria-hidden="true">→</span></a></li>
       <li><a href="schedule.html" aria-current="page">Timetable<span aria-hidden="true">→</span></a></li>
-      <li><a href="coaches.html">Coaches<span aria-hidden="true">→</span></a></li>
+      <li><a href="coach.html">Meet the Coach<span aria-hidden="true">→</span></a></li>
+      <li><a href="kids.html">Kids Classes<span aria-hidden="true">→</span></a></li>
       <li><a href="membership.html">Membership<span aria-hidden="true">→</span></a></li>
-      <li><a href="about.html">About<span aria-hidden="true">→</span></a></li>
+      <li><a href="contact.html">Contact<span aria-hidden="true">→</span></a></li>
     </ol>
   </nav>
   <div class="mobile-menu-foot">
     <span data-open-status></span>
-    <p>88 Foundry Road, Unit 4<br><a href="tel:+15550104477">(555) 010-4477</a></p>
-    <a class="btn btn-primary btn-block" href="contact.html">Book your free class <span class="arrow" aria-hidden="true">→</span></a>
+    <p><a href="tel:+94770000000">+94 77 000 0000</a></p>
+    <a class="btn btn-primary btn-block" href="membership.html">See memberships <span class="arrow" aria-hidden="true">→</span></a>
   </div>
 </div>
 
@@ -91,104 +94,110 @@
       <div class="page-hero-grid">
         <div>
           <span class="eyebrow label">Timetable</span>
-          <h1 class="display d-xl" id="page-title">40 classes. Seven days.</h1>
+          <h1 class="display d-xl" id="page-title">Nine sessions. One week.</h1>
         </div>
-        <div class="page-hero-aside">
-          <p class="lead">Classes start on time, so arrive ten minutes early to wrap up. New here? Filter for beginner-friendly classes and book your first one free.</p>
-          <span data-open-status></span>
-        </div>
+        <div class="page-hero-aside"><p class="lead">Morning and evening sessions through the week, plus Saturday afternoon. Sunday is for recovery.</p><span data-open-status></span></div>
       </div>
     </div>
   </section>
 
-  <section class="section-tight" aria-label="Weekly timetable">
+  <section class="section-tight" aria-label="Weekly sessions">
     <div class="wrap">
-      <div class="tt-controls">
-        <div class="chips" data-tt-chips role="group" aria-label="Filter by program"></div>
-        <div class="cta-row">
-          <button class="chip" type="button" data-tt-coach hidden><span>Coach</span> <b aria-hidden="true">×</b><b class="sr-only">Clear coach filter</b></button>
-          <label class="switch" for="beginner-only"><input type="checkbox" id="beginner-only" data-tt-beginner>Beginner-friendly only</label>
+      <div class="tt-summary">
+        <div><b data-count-sessions>9</b><span class="label muted">Sessions a week</span></div>
+        <div><b data-count-hours>18</b><span class="label muted">Hours of training</span></div>
+        <div class="legend" aria-label="Legend">
+          <span><i style="--c: var(--heat-4)"></i>Morning</span>
+          <span><i style="--c: var(--heat-3)"></i>Afternoon</span>
+          <span><i style="--c: var(--heat-2)"></i>Evening</span>
         </div>
       </div>
-      <p class="label muted" data-tt-count aria-live="polite" style="margin-bottom: 16px"></p>
-      <div class="tt-days" data-tt-days role="tablist" aria-label="Day of the week"></div>
-      <div class="timetable" data-timetable>
-        <noscript><p class="tt-empty">The timetable needs JavaScript. Call (555) 010-4477 and we’ll talk you through it.</p></noscript>
+      <div class="days" data-timetable>
+        <noscript><p>Mon, Wed, Fri: 10 AM – 12 PM and 7 – 9 PM. Tue, Thu: 10 AM – 12 PM. Sat: 4 – 6 PM. Sunday closed.</p></noscript>
       </div>
-      <p class="tt-note">Public holidays run the Sunday timetable. We post any changes on Instagram a week ahead.</p>
     </div>
   </section>
 
-  <section class="section-tight bg-raised" aria-labelledby="first-visit">
-    <div class="wrap two-col">
-      <div class="stack">
-        <span class="eyebrow label">First visit</span>
-        <h2 class="display d-l" id="first-visit">Which class should I book?</h2>
+  <section class="section-tight bg-deep seam" aria-labelledby="glance-title">
+    <div class="wrap stack" style="--stack: 28px">
+      <div class="section-head" style="margin-bottom: 0">
+        <h2 class="display d-m" id="glance-title">The week at a glance</h2>
+        <p class="muted">Each bar is a session, drawn to scale from 8 AM to 10 PM. The white line marks right now.</p>
       </div>
-      <div class="stack" style="--stack: 28px">
-        <p class="lead">Book Foundations, Fight Conditioning, Women’s Boxing or Youth Boxing. All four are built for people who have never trained, and a coach will look after you from the moment you walk in.</p>
-        <ul class="ticks" role="list">
-          <li>Arrive 15 minutes early for your first class so we can wrap your hands.</li>
-          <li>Wear trainers with flat soles and clothes you can move in.</li>
-          <li>We lend gloves and wraps for free until you get your own.</li>
-        </ul>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="contact.html">Book your free class <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="link-arrow" href="programs.html">Compare programs <span class="arrow" aria-hidden="true">→</span></a>
-        </div>
+      <div class="table-wrap" style="border: 0"><div class="wkchart" data-weekchart role="img" aria-label="Weekly sessions chart"></div></div>
+    </div>
+  </section>
+
+  <section class="fire" aria-labelledby="fire-title">
+    <div class="wrap fire-grid">
+      <h2 class="display d-xl" id="fire-title">Pick your days.</h2>
+      <div class="fire-aside">
+        <p>Memberships start at 8 days a month. Train any session on the timetable.</p>
+        <a class="btn btn-ink" href="membership.html">See memberships <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-cta">
+      <p class="footer-slogan">Let the pain<br><span>forge</span> you.</p>
+      <div class="footer-cta-side">
+        <p>No contracts. Pick a membership, show up, and let the work do the rest.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="membership.html">Join Forge <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-steel" href="contact.html">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <a class="brand" href="index.html" aria-label="Forge Boxing Club home">
+      <a class="brand" href="index.html" aria-label="Forge Boxing & Fitness Academy home">
         <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="currentColor" d="M2 15.5C8 15.5 11 14 15 14H46V20H38C35 20 33 22 33 25V28L38 33V37H12V33L17 28V25C17 22 15 21 12 20.5C8 20 5 18 2 15.5Z"/><path fill="#ffb43f" d="M30 1L31.6 5.4L36 7L31.6 8.6L30 13L28.4 8.6L24 7L28.4 5.4Z"/></svg>
-        <span class="brand-word">Forge<span class="brand-sub">Boxing Club</span></span>
+        <span class="brand-word">Forge<span class="brand-sub">Fitness Academy</span></span>
       </a>
-      <p>A boxing club for first-timers, fitness chasers and fighters. Coached properly, every round, since 2019.</p>
+      <p>Boxing and fitness for anyone with a genuine interest in the sport. Coached by four-time national champion Asanka Rajapakshe.</p>
       <div class="socials">
         <a href="https://www.instagram.com/" aria-label="Forge on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://www.youtube.com/" aria-label="Forge on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9.2l5 2.8-5 2.8z" fill="currentColor" stroke="none"/></svg></a>
         <a href="https://www.facebook.com/" aria-label="Forge on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M14 21v-7h3l.5-3.5H14V8.8c0-1 .4-1.8 1.9-1.8H17.6V4a17 17 0 0 0-2.6-.2c-2.8 0-4.5 1.6-4.5 4.6v2.1H7.5V14h3v7"/></svg></a>
+        <a href="https://wa.me/94770000000" aria-label="Message Forge on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.8z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a4 4 0 0 1-2-2l1-1-1-2z" fill="currentColor" stroke="none"/></svg></a>
       </div>
     </div>
     <div class="footer-col">
-      <h2 class="label">Visit</h2>
-      <address>88 Foundry Road, Unit 4<br>Northside</address>
-      <ul>
-        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=88+Foundry+Road" rel="noopener">Get directions →</a></li>
-        <li><a href="tel:+15550104477">(555) 010-4477</a></li>
-        <li><a href="mailto:hello@forgeboxing.example">hello@forgeboxing.example</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h2 class="label">Hours</h2>
+      <h2 class="label">Training hours</h2>
       <dl class="hours">
-        <div data-days="1,2,3,4,5"><dt>Mon–Fri</dt><dd>6 AM – 9 PM</dd></div>
-        <div data-days="6"><dt>Saturday</dt><dd>8 AM – 2 PM</dd></div>
-        <div data-days="0"><dt>Sunday</dt><dd>9 AM – 12 PM</dd></div>
-      </dl>
+          <div data-days="1,3,5"><dt>Mon · Wed · Fri</dt><dd>10–12 AM · 7–9 PM</dd></div>
+          <div data-days="2,4"><dt>Tue · Thu</dt><dd>10 AM – 12 PM</dd></div>
+          <div data-days="6"><dt>Saturday</dt><dd>4 – 6 PM</dd></div>
+          <div data-days="0"><dt>Sunday</dt><dd>Rest day</dd></div>
+        </dl>
       <span data-open-status></span>
     </div>
     <div class="footer-col">
       <h2 class="label">Explore</h2>
       <ul>
-        <li><a href="programs.html">Programs</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="schedule.html">Timetable</a></li>
-        <li><a href="coaches.html">Coaches</a></li>
+        <li><a href="coach.html">Meet the Coach</a></li>
+        <li><a href="kids.html">Kids Classes</a></li>
         <li><a href="membership.html">Membership</a></li>
-        <li><a href="about.html">About the club</a></li>
-        <li><a href="contact.html">Book a free class</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h2 class="label">Get in touch</h2>
+      <ul>
+        <li><a href="tel:+94770000000">+94 77 000 0000</a></li>
+        <li><a href="mailto:hello@forgeboxing.example">hello@forgeboxing.example</a></li>
+        <li><a href="contact.html">Send a message →</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-mark" aria-hidden="true">Forge</div>
   <div class="wrap">
     <div class="footer-base">
-      <span>© <span data-year>2026</span> Forge Boxing Club. All rights reserved.</span>
+      <span>© <span data-year>2026</span> Forge Boxing & Fitness Academy. All rights reserved.</span>
       <a href="#main">Back to top ↑</a>
     </div>
   </div>
@@ -196,6 +205,7 @@
 
 <script src="assets/js/data.js" defer></script>
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/preloader.js" defer></script>
 <script src="assets/js/schedule.js" defer></script>
 </body>
 </html>

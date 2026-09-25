@@ -8,16 +8,25 @@ A fast, hand-built marketing site for **Forge**, a boxing gym. Seven pages plus 
 
 | Page | What it does |
 | --- | --- |
-| `index.html` | Home. Hero with an interactive heavy bag (hit it, it swings and throws sparks), the Heat → Hammer → Temper method, program cards, a minute-by-minute "first class" timeline, a live **Today at Forge** board, coaches, pricing teaser. |
-| `programs.html` | Eight programs, each with specs, a to-scale "inside a class" minute breakdown, outcomes and live **next sessions** pulled from the timetable. |
-| `schedule.html` | Weekly timetable. Filter by program, coach (`?coach=maya`) or beginner-friendly classes. Highlights today and any class that's on now. Day tabs on phones. |
-| `coaches.html` | Six coach profiles with stance, focus, go-to combo (in boxing numbers) and the classes they teach, generated from the timetable. |
-| `membership.html` | Plans with a monthly / yearly toggle, extras, comparison table and FAQ. |
-| `about.html` | Story, milestones, an interactive floor plan and house rules. |
-| `contact.html` | Free-class booking form with inline validation, a first-class picker built from the next two weeks of the timetable, and a calendar download on confirmation. |
+| `index.html` | Home. Hero with space for your home photo and an interactive heavy bag, Who we are, How it works with a membership button, Boxing / Fitness / Parking / Showers icons, a live "coming up" session board and a coach feature. |
+| `schedule.html` | Timetable. Day cards with morning, afternoon and evening sessions, a to-scale "week at a glance" chart, and live "on now" highlighting. |
+| `coach.html` | Meet the Coach: Asanka Rajapakshe's qualifications, career highlights and a photo gallery. |
+| `kids.html` | Kids classes, with a contact call to action. |
+| `membership.html` | 8 days (LKR 5,000), 12 days (LKR 7,000) and 12+ days (LKR 10,000) a month, plus kids and private sessions on request. |
+| `contact.html` | Enquiry form (preselects the plan from the button the visitor clicked). |
 | `404.html` | "Beat the count" error page. |
 
-**The heat rating.** Every class is rated on a blacksmith's steel-colour chart, from dull red (1,200°F, easy going) to white-hot (2,300°F, full intensity). It's the site's signature detail and shows up on cards, the timetable and program pages.
+Every page opens with a cosmic, blood-red "Let the pain forge you" preloader (about 4 seconds, once per visit).
+
+## Add your photos
+
+Drop these files into `assets/img/` and they appear automatically. Until then, the site shows designed placeholders.
+
+| File | Where it shows |
+| --- | --- |
+| `home.jpg` | Behind the home page hero (landscape, around 2000 × 1300 px) |
+| `coach-asanka.jpg` | Coach portrait on the home and coach pages (portrait 4:5, around 800 × 1000 px) |
+| `gallery-1.jpg` … `gallery-6.jpg` | "Coach at work" gallery. `gallery-1` is the large tile |
 
 ## Preview it
 
@@ -45,13 +54,9 @@ The content is written to be realistic, but the business details are placeholder
 | --- | --- |
 | `www.forgeboxing.example` (domain) | `<head>` of every page, the JSON-LD block in `index.html`, `sitemap.xml`, `robots.txt` |
 | `hello@forgeboxing.example` | `assets/js/data.js`, footer, contact page, JSON-LD |
-| `(555) 010-4477` / `+15550104477` | `assets/js/data.js`, footer, mobile menu, contact page, membership FAQ, timetable page, JSON-LD |
-| `88 Foundry Road, Unit 4, Northside` | Footer, mobile menu, contact page, `forms.js` (calendar file), JSON-LD, Google Maps links |
-| Parking and station note | `contact.html` |
+| `+94 77 000 0000` / `+94770000000` | `assets/js/data.js`, footer, mobile menu, contact page, membership FAQ, timetable page, JSON-LD |
+| Address | Not on the site yet. Add it to the footer and contact page, and to `address` in the JSON-LD in `index.html` |
 | Social links | Footer (currently point at the Instagram, YouTube and Facebook home pages) |
-| Coaches: names, bios, quotes, stats | `coaches.html`, the coach cards on `index.html`, coach keys in `data.js` |
-| Prices and policies | `membership.html`, `index.html` teaser, private coaching on `programs.html` |
-| Story, milestones, "Est. 2019", floor sizes, "14 heavy bags" | `about.html`, `index.html` hero stats |
 
 Everything else (copy, class structure, FAQ answers) is ready to use, but read it through and adjust anything that doesn't match how you run the gym.
 
@@ -73,29 +78,13 @@ Any service that accepts a JSON `POST` works (Formspree, Basin, Getform, your ow
 
 ## Everyday edits
 
-**Timetable and opening hours.** Edit `assets/js/data.js`. Each class is one line:
+**Timetable.** Edit `FORGE.hours` in `assets/js/data.js`. Each day lists its sessions as `["start", "end"]` in 24-hour time. The timetable page, the home page board, the live "training now" status and the session counts all update from it. Also update the static hours list in the footer, home and contact pages (search for `Mon · Wed · Fri`).
 
-```js
-{ d: 1, t: "18:00", m: 75, p: "technical", c: "dante" },
-// d = weekday (0 Sun … 6 Sat), t = 24h start, m = minutes, p = program, c = coach
-```
+**Prices.** Edit the plan cards in `membership.html` and the options in the `contact.html` form.
 
-That one file feeds the timetable, the "Today at Forge" board, next-session lists, coach class lists and the booking form's class picker. A few counts are written into the page copy, so update them if the timetable changes: "40 classes" (home stats, timetable title, meta descriptions, social image) and "Runs … times a week" on `programs.html`.
+**Contact form.** Paste a form endpoint (e.g. Formspree) into `formEndpoint` in `assets/js/data.js`. Left empty, the form opens the visitor's email app with the message filled in.
 
-**Prices.** In `membership.html`, each price has both values on it, for example `data-monthly="179" data-annual="152"`. The toggle swaps them. Update the visible number, both attributes and the matching `plan-note` text.
-
-**Coach photos.** The portraits are typographic by design, so the site looks finished without photography. To add a real photo, put an image inside the portrait and it covers the artwork:
-
-```html
-<div class="portrait">
-  <img src="assets/img/coach-dante.jpg" alt="Dante Cruz holding pads" width="800" height="1000" loading="lazy">
-  ...
-</div>
-```
-
-Use 4:5 portrait images around 800 × 1000 px, compressed to under 150 KB each.
-
-**Header and footer.** They're repeated in each HTML file, so a change to the navigation or footer needs making in all eight pages.
+**Preloader.** It plays once per visit for about 4 seconds. Change the `4200` in `assets/js/main.js` to adjust the length.
 
 ## Technical notes
 

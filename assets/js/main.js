@@ -8,7 +8,7 @@
   root.classList.add("js");
 
   /* ---------------------------------------------------------------
-     Preloader: hold at least 1.6 s so the hammer lands, then fade
+     Preloader: a deliberate ~4 s intro, then fade
      --------------------------------------------------------------- */
   var pre = document.querySelector("[data-preloader]");
   if (pre && !root.classList.contains("no-preloader")) {
@@ -16,11 +16,11 @@
     var hide = function () {
       window.setTimeout(function () {
         pre.classList.add("is-done");
-      }, Math.max(0, 1600 - (Date.now() - started)));
+      }, Math.max(0, 4200 - (Date.now() - started)));
     };
     if (document.readyState === "complete") hide();
     else window.addEventListener("load", hide);
-    window.setTimeout(function () { pre.classList.add("is-done"); }, 5000);
+    window.setTimeout(function () { pre.classList.add("is-done"); }, 8000);
   }
 
   /* ---------------------------------------------------------------
@@ -58,27 +58,27 @@
     );
   }
 
+  // Live status from the session list in data.js
   function openState(now) {
     var hours = (window.FORGE && FORGE.hours) || {};
     var d = now.getDay();
     var mins = now.getHours() * 60 + now.getMinutes();
-    var today = hours[d];
-    if (today) {
-      var o = toMin(today[0]);
-      var c = toMin(today[1]);
-      if (mins >= o && mins < c) return { open: true, text: "Open now · until " + fmtTime(c, { short: true }) };
-      if (mins < o) return { open: false, text: "Closed · opens " + fmtTime(o, { short: true }) };
+    var today = hours[d] || [];
+    for (var j = 0; j < today.length; j++) {
+      var o = toMin(today[j][0]), c = toMin(today[j][1]);
+      if (mins >= o && mins < c) return { open: true, text: "Training now · until " + fmtTime(c, { short: true }) };
+      if (mins < o) return { open: false, text: "Next session · today " + fmtTime(o, { short: true }) };
     }
     for (var i = 1; i <= 7; i++) {
       var nd = (d + i) % 7;
-      if (hours[nd]) {
+      if (hours[nd] && hours[nd].length) {
         return {
           open: false,
-          text: "Closed · opens " + (i === 1 ? "tomorrow" : DAY[nd]) + " " + fmtTime(toMin(hours[nd][0]), { short: true }),
+          text: "Next session · " + (i === 1 ? "tomorrow" : DAY[nd]) + " " + fmtTime(toMin(hours[nd][0][0]), { short: true }),
         };
       }
     }
-    return { open: false, text: "Closed" };
+    return { open: false, text: "See the timetable" };
   }
 
   window.FORGE = window.FORGE || {};

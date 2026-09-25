@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Contact | Forge Boxing & Fitness Academy</title>
-<meta name="description" content="Get in touch about memberships, kids classes or private sessions.">
+<title>Kids Classes | Forge Boxing & Fitness Academy</title>
+<meta name="description" content="Boxing classes for kids that build fitness, focus and confidence. Contact us for times and pricing.">
 <meta name="theme-color" content="#0e1215">
-<link rel="canonical" href="https://www.forgeboxing.example/contact.html">
+<link rel="canonical" href="https://www.forgeboxing.example/kids.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Forge Boxing & Fitness Academy">
-<meta property="og:title" content="Contact | Forge Boxing & Fitness Academy">
-<meta property="og:description" content="Get in touch about memberships, kids classes or private sessions.">
-<meta property="og:url" content="https://www.forgeboxing.example/contact.html">
+<meta property="og:title" content="Kids Classes | Forge Boxing & Fitness Academy">
+<meta property="og:description" content="Boxing classes for kids that build fitness, focus and confidence. Contact us for times and pricing.">
+<meta property="og:url" content="https://www.forgeboxing.example/kids.html">
 <meta property="og:image" content="https://www.forgeboxing.example/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -58,7 +58,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="schedule.html">Timetable</a></li>
         <li><a href="coach.html">Meet the Coach</a></li>
-        <li><a href="kids.html">Kids Classes</a></li>
+        <li><a href="kids.html" aria-current="page">Kids Classes</a></li>
         <li><a href="membership.html">Membership</a></li>
       </ul>
     </nav>
@@ -75,9 +75,9 @@
       <li><a href="index.html">Home<span aria-hidden="true">→</span></a></li>
       <li><a href="schedule.html">Timetable<span aria-hidden="true">→</span></a></li>
       <li><a href="coach.html">Meet the Coach<span aria-hidden="true">→</span></a></li>
-      <li><a href="kids.html">Kids Classes<span aria-hidden="true">→</span></a></li>
+      <li><a href="kids.html" aria-current="page">Kids Classes<span aria-hidden="true">→</span></a></li>
       <li><a href="membership.html">Membership<span aria-hidden="true">→</span></a></li>
-      <li><a href="contact.html" aria-current="page">Contact<span aria-hidden="true">→</span></a></li>
+      <li><a href="contact.html">Contact<span aria-hidden="true">→</span></a></li>
     </ol>
   </nav>
   <div class="mobile-menu-foot">
@@ -89,82 +89,52 @@
 
 <main id="main">
   <section class="page-hero" aria-labelledby="page-title">
-    <div class="page-hero-ghost" aria-hidden="true">Talk</div>
+    <div class="page-hero-ghost" aria-hidden="true">Kids</div>
     <div class="wrap">
       <div class="page-hero-grid">
         <div>
-          <span class="eyebrow label">Contact</span>
-          <h1 class="display d-xl" id="page-title">Get in touch.</h1>
+          <span class="eyebrow label">Kids classes</span>
+          <h1 class="display d-xl" id="page-title">Small fighters. Big hearts.</h1>
         </div>
-        <div class="page-hero-aside"><p class="lead">Questions about memberships, kids classes or private sessions? Send a message and we’ll get back to you.</p><span data-open-status></span></div>
+        <div class="page-hero-aside"><p class="lead">Boxing gives kids fitness, focus and confidence. Our kids classes are coached with patience, structure and safety first.</p><a class="btn btn-primary" href="contact.html?interest=kids">Ask about kids classes <span class="arrow" aria-hidden="true">→</span></a></div>
       </div>
     </div>
   </section>
 
-  <section class="section-tight" aria-label="Contact form and details">
-    <div class="wrap booking">
-      <div class="form-card">
-        <form class="form" data-enquiry novalidate>
-          <div class="field">
-            <label for="name">Your name</label>
-            <input class="input" id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
-            <p class="field-error" id="name-error"></p>
-          </div>
-          <div class="field">
-            <div class="form-row">
-              <div class="field"><label for="phone">Phone / WhatsApp</label><input class="input" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="contact-error"></div>
-              <div class="field"><label for="email">Email</label><input class="input" id="email" name="email" type="email" autocomplete="email" aria-describedby="contact-error"></div>
-            </div>
-            <p class="field-error" id="contact-error"></p>
-          </div>
-          <div class="field">
-            <label for="interest">I’m interested in</label>
-            <select class="input" id="interest" name="interest">
-              <option value="m8">Starter · 8 days a month (LKR 5,000)</option>
-              <option value="m12">Regular · 12 days a month (LKR 7,000)</option>
-              <option value="m12plus">Unlimited · 12+ days a month (LKR 10,000)</option>
-              <option value="kids">Kids membership</option>
-              <option value="private">Private sessions</option>
-              <option value="other">Something else</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Message <span class="opt">(optional)</span></label>
-            <textarea class="input" id="message" name="message" rows="5" placeholder="Tell us your goals, experience or questions"></textarea>
-          </div>
-          <input class="sr-only" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <p class="form-status" data-form-status role="alert"></p>
-          <div class="form-foot">
-            <p>We only use your details to reply to you.</p>
-            <button class="btn btn-primary" type="submit" data-submit>Send message <span class="arrow" aria-hidden="true">→</span></button>
-          </div>
-        </form>
-        <div class="confirm" data-confirm hidden tabindex="-1">
-          <svg class="confirm-mark" viewBox="0 0 48 48" aria-hidden="true"><path fill="currentColor" d="M2 15.5C8 15.5 11 14 15 14H46V20H38C35 20 33 22 33 25V28L38 33V37H12V33L17 28V25C17 22 15 21 12 20.5C8 20 5 18 2 15.5Z"/></svg>
-          <h2 class="display d-l" data-confirm-title>Message received.</h2>
-          <p class="lead" data-confirm-text></p>
-          <div class="cta-row"><a class="btn btn-steel" data-mailto hidden href="#">Open the email again</a><a class="link-arrow" href="schedule.html">See the timetable <span class="arrow" aria-hidden="true">→</span></a></div>
+  <section class="section" aria-labelledby="kids-why">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow label">Why boxing</span>
+        <h2 class="display d-l" id="kids-why" data-reveal-heat>More than punches.</h2>
+        <p class="lead">Every class builds the habits that matter outside the gym.</p>
+      </div>
+      <div class="amenities" style="margin-top: 0">
+        <div class="amenity"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 6.5v11M3.5 9v6M17.5 6.5v11M20.5 9v6M6.5 12h11"/></svg></span><h3>Fitness</h3><p>Coordination, balance and energy that lasts.</p></div>
+        <div class="amenity"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></span><h3>Focus</h3><p>Listening, timing and following a plan.</p></div>
+        <div class="amenity"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11.5V7a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v6a4.5 4.5 0 0 1-3 4.2V21H8v-4a5 5 0 0 1-4-5 2 2 0 0 1 3-.5z"/><path d="M8 21h8M11 7.5h4.5"/></svg></span><h3>Confidence</h3><p>Learning a real skill, one round at a time.</p></div>
+        <div class="amenity"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="6" r="2.5"/><circle cx="16.5" cy="8" r="2"/><path d="M4 21v-5a4 4 0 0 1 8 0v5M13 21v-4a3.5 3.5 0 0 1 7 0v4"/></svg></span><h3>Respect</h3><p>For coaches, partners and themselves.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight bg-raised seam" aria-labelledby="kids-how">
+    <div class="wrap two-col">
+      <div class="stack">
+        <span class="eyebrow label">How it works</span>
+        <h2 class="display d-l" id="kids-how">Talk to us first.</h2>
+      </div>
+      <div class="stack" style="--stack: 28px">
+        <p class="lead">Kids memberships are arranged directly with the coach, so we can place your child in the right group. Get in touch for class times, age groups and pricing.</p>
+        <ul class="ticks" role="list">
+          <li>Coached by a qualified, national-level coach</li>
+          <li>Technique and fitness first, safety always</li>
+          <li>Parents are welcome to watch</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="contact.html?interest=kids">Contact us <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="link-arrow" href="tel:+94770000000">Call +94 77 000 0000</a>
         </div>
       </div>
-      <aside class="info-card" aria-label="Contact details">
-        <div class="info-block">
-          <h2 class="label">Call or WhatsApp</h2>
-          <div class="copy-row"><a href="tel:+94770000000">+94 77 000 0000</a><button class="copy-btn" type="button" data-copy="+94 77 000 0000">Copy</button></div>
-        </div>
-        <div class="info-block">
-          <h2 class="label">Email</h2>
-          <div class="copy-row"><a href="mailto:hello@forgeboxing.example">hello@forgeboxing.example</a><button class="copy-btn" type="button" data-copy="hello@forgeboxing.example">Copy</button></div>
-        </div>
-        <div class="info-block">
-          <h2 class="label">Training hours</h2>
-          <dl class="hours">
-          <div data-days="1,3,5"><dt>Mon · Wed · Fri</dt><dd>10–12 AM · 7–9 PM</dd></div>
-          <div data-days="2,4"><dt>Tue · Thu</dt><dd>10 AM – 12 PM</dd></div>
-          <div data-days="6"><dt>Saturday</dt><dd>4 – 6 PM</dd></div>
-          <div data-days="0"><dt>Sunday</dt><dd>Rest day</dd></div>
-        </dl>
-        </div>
-      </aside>
     </div>
   </section>
 </main>
@@ -236,6 +206,5 @@
 <script src="assets/js/data.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/preloader.js" defer></script>
-<script src="assets/js/forms.js" defer></script>
 </body>
 </html>

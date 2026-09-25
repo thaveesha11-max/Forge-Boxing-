@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Forge Boxing Club | Boxing classes for beginners to fighters</title>
-<meta name="description" content="Real boxing, coached by people who have fought. 40 classes a week for beginners, fitness and fighters. Your first class is free.">
+<title>Forge Boxing & Fitness Academy | Let the pain forge you</title>
+<meta name="description" content="Boxing and fitness training with no contracts, coached by four-time national champion Asanka Rajapakshe.">
 <meta name="theme-color" content="#0e1215">
 <link rel="canonical" href="https://www.forgeboxing.example/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Forge Boxing Club">
-<meta property="og:title" content="Forge Boxing Club | Boxing classes for beginners to fighters">
-<meta property="og:description" content="Real boxing, coached by people who have fought. 40 classes a week for beginners, fitness and fighters. Your first class is free.">
+<meta property="og:site_name" content="Forge Boxing & Fitness Academy">
+<meta property="og:title" content="Forge Boxing & Fitness Academy | Let the pain forge you">
+<meta property="og:description" content="Boxing and fitness training with no contracts, coached by four-time national champion Asanka Rajapakshe.">
 <meta property="og:url" content="https://www.forgeboxing.example/">
 <meta property="og:image" content="https://www.forgeboxing.example/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -20,38 +20,34 @@
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/big-shoulders-stencil.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/big-shoulders.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/styles.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ExerciseGym",
-  "name": "Forge Boxing Club",
-  "description": "Boxing classes for beginners, fitness and competitive boxers. First class free.",
+  "name": "Forge Boxing & Fitness Academy",
+  "description": "Boxing and fitness training with no contracts, coached by four-time national champion Asanka Rajapakshe.",
   "url": "https://www.forgeboxing.example/",
   "image": "https://www.forgeboxing.example/assets/img/og-image.png",
-  "telephone": "+1-555-010-4477",
+  "telephone": "+94 77 000 0000",
   "email": "hello@forgeboxing.example",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "88 Foundry Road, Unit 4",
-    "addressLocality": "Northside",
-    "addressCountry": "US"
-  },
+  "address": { "@type": "PostalAddress", "addressCountry": "LK" },
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "06:00", "closes": "21:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "12:00" }
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Friday"], "opens": "19:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "16:00", "closes": "18:00" }
   ]
 }
 </script>
 </head>
 <body>
 <div class="preloader" data-preloader aria-hidden="true">
+  <canvas class="pl-stars"></canvas>
+  <div class="pl-nebula"></div>
   <div class="preloader-inner">
-    <p class="preloader-text">Let the pain <span>forge</span> you</p>
+    <p class="pl-text"><span class="pl-word">Let the pain</span><span class="pl-word pl-big">Forge</span><span class="pl-word">you</span></p>
     <svg class="preloader-forge" viewBox="0 0 120 80" focusable="false">
       <g class="pl-sparks" stroke="#ff3b2f" stroke-width="1.6" stroke-linecap="round">
         <path d="M58 36l-8-10"/><path d="M62 36l6-12"/><path d="M55 38l-12-4"/><path d="M65 38l12-5"/><path d="M60 35v-12"/>
@@ -63,6 +59,7 @@
       </g>
       <path transform="translate(33 38) scale(1.1)" fill="#56616c" d="M2 15.5C8 15.5 11 14 15 14H46V20H38C35 20 33 22 33 25V28L38 33V37H12V33L17 28V25C17 22 15 21 12 20.5C8 20 5 18 2 15.5Z"/>
     </svg>
+    <div class="pl-bar"><i></i></div>
   </div>
 </div>
 <script>try{if(sessionStorage.getItem("forge-intro"))document.documentElement.classList.add("no-preloader");sessionStorage.setItem("forge-intro","1")}catch(e){}</script>
@@ -70,21 +67,21 @@
 
 <header class="site-header" data-header>
   <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="Forge Boxing Club home">
+    <a class="brand" href="index.html" aria-label="Forge Boxing & Fitness Academy home">
       <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="currentColor" d="M2 15.5C8 15.5 11 14 15 14H46V20H38C35 20 33 22 33 25V28L38 33V37H12V33L17 28V25C17 22 15 21 12 20.5C8 20 5 18 2 15.5Z"/><path fill="#ffb43f" d="M30 1L31.6 5.4L36 7L31.6 8.6L30 13L28.4 8.6L24 7L28.4 5.4Z"/></svg>
-      <span class="brand-word">Forge<span class="brand-sub">Boxing Club</span></span>
+      <span class="brand-word">Forge<span class="brand-sub">Fitness Academy</span></span>
     </a>
     <nav aria-label="Main">
       <ul class="nav-links">
-        <li><a href="programs.html">Programs</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="schedule.html">Timetable</a></li>
-        <li><a href="coaches.html">Coaches</a></li>
+        <li><a href="coach.html">Meet the Coach</a></li>
+        <li><a href="kids.html">Kids Classes</a></li>
         <li><a href="membership.html">Membership</a></li>
-        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
     <div class="nav-end">
-      <a class="btn btn-primary btn-sm" href="contact.html">Free class</a>
+      <a class="btn btn-primary btn-sm" href="membership.html">Join now</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><span></span><b class="sr-only">Open menu</b></button>
     </div>
   </div>
@@ -94,43 +91,41 @@
   <nav aria-label="Mobile">
     <ol>
       <li><a href="index.html" aria-current="page">Home<span aria-hidden="true">→</span></a></li>
-      <li><a href="programs.html">Programs<span aria-hidden="true">→</span></a></li>
       <li><a href="schedule.html">Timetable<span aria-hidden="true">→</span></a></li>
-      <li><a href="coaches.html">Coaches<span aria-hidden="true">→</span></a></li>
+      <li><a href="coach.html">Meet the Coach<span aria-hidden="true">→</span></a></li>
+      <li><a href="kids.html">Kids Classes<span aria-hidden="true">→</span></a></li>
       <li><a href="membership.html">Membership<span aria-hidden="true">→</span></a></li>
-      <li><a href="about.html">About<span aria-hidden="true">→</span></a></li>
+      <li><a href="contact.html">Contact<span aria-hidden="true">→</span></a></li>
     </ol>
   </nav>
   <div class="mobile-menu-foot">
     <span data-open-status></span>
-    <p>88 Foundry Road, Unit 4<br><a href="tel:+15550104477">(555) 010-4477</a></p>
-    <a class="btn btn-primary btn-block" href="contact.html">Book your free class <span class="arrow" aria-hidden="true">→</span></a>
+    <p><a href="tel:+94770000000">+94 77 000 0000</a></p>
+    <a class="btn btn-primary btn-block" href="membership.html">See memberships <span class="arrow" aria-hidden="true">→</span></a>
   </div>
 </div>
 
 <main id="main">
-
-  <!-- ============ HERO ============ -->
   <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-photo" aria-hidden="true"></div>
     <canvas class="hero-canvas" data-embers aria-hidden="true"></canvas>
     <div class="wrap">
       <div class="hero-grid">
         <div class="hero-copy">
           <div class="hero-meta">
             <span data-open-status></span>
-            <span class="label muted">Boxing club · Est. 2019</span>
+            <span class="label muted">Boxing &amp; Fitness Academy</span>
           </div>
           <h1 class="display hero-title" id="hero-title">
             <span class="line">Come in raw.</span>
             <span class="line line-2 hot">Leave forged.</span>
           </h1>
-          <p class="lead">Real boxing, coached by people who have fought. Start from zero or sharpen up for the ring. Your first class is free and we’ll wrap your hands.</p>
+          <p class="lead">Boxing and fitness training for anyone with a genuine interest in the sport, coached by four-time national champion Asanka Rajapakshe.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="contact.html">Book your free class <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-primary" href="membership.html">View memberships <span class="arrow" aria-hidden="true">→</span></a>
             <a class="btn btn-steel" href="schedule.html">See the timetable</a>
           </div>
         </div>
-
         <div class="bag-stage" data-bag role="group" aria-label="Interactive heavy bag">
           <svg class="bag-svg" viewBox="0 0 320 760" aria-hidden="true" focusable="false">
             <defs>
@@ -247,17 +242,15 @@
           <p class="sr-only" aria-live="polite" data-bag-live></p>
         </div>
       </div>
-
       <div class="hero-stats">
-        <div><span class="stat-num">40</span><span class="label muted">Classes a week</span></div>
-        <div><span class="stat-num">6</span><span class="label muted">Coaches on the floor</span></div>
-        <div><span class="stat-num">14</span><span class="label muted">Heavy bags</span></div>
-        <div><span class="stat-num">$0</span><span class="label muted">Joining fee</span></div>
+        <div><span class="stat-num" data-count-sessions>9</span><span class="label muted">Sessions a week</span></div>
+        <div><span class="stat-num">4<sup>×</sup></span><span class="label muted">National champion coach</span></div>
+        <div><span class="stat-num">2024</span><span class="label muted">Asian Games head coach</span></div>
+        <div><span class="stat-num">0</span><span class="label muted">Contracts</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ MARQUEE ============ -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
       <div class="marquee-group">
@@ -283,277 +276,148 @@
     </div>
   </div>
 
-  <!-- ============ METHOD ============ -->
-  <section class="section" aria-labelledby="method-title">
-    <div class="wrap method">
-      <div class="method-intro">
-        <span class="eyebrow label">The Forge method</span>
-        <h2 class="display d-l" id="method-title" data-reveal-heat>Steel takes three stages. So do fighters.</h2>
-        <p class="lead">A blacksmith heats, hammers, then tempers. Every program here follows the same order, so you always know what you’re working on and why.</p>
-        <a class="link-arrow" href="programs.html">Explore the programs <span class="arrow" aria-hidden="true">→</span></a>
+  <section class="section" aria-labelledby="who-title">
+    <div class="wrap intro">
+      <div class="stack">
+        <span class="eyebrow label">Who we are</span>
+        <h2 class="display d-l" id="who-title" data-reveal-heat>Built for anyone who wants it.</h2>
       </div>
-      <ol class="method-stages" role="list">
-        <li class="stage" style="--c: var(--heat-2)" data-reveal>
-          <div class="stage-temp"><span class="num">01 · Heat</span><span class="deg">1,500°F</span><span class="label muted">Cherry red</span></div>
-          <div class="stage-body">
-            <h3 class="display d-m">Learn the craft</h3>
-            <p>Stance, footwork, guard and the jab. We slow boxing right down until your body knows it without thinking.</p>
-            <div class="stage-links"><a href="programs.html#foundations"><span class="tag">Foundations</span></a><a href="programs.html#youth"><span class="tag">Youth Boxing</span></a></div>
-          </div>
-        </li>
-        <li class="stage" style="--c: var(--heat-4)" data-reveal data-reveal-delay="80">
-          <div class="stage-temp"><span class="num">02 · Hammer</span><span class="deg">2,000°F</span><span class="label muted">Yellow</span></div>
-          <div class="stage-body">
-            <h3 class="display d-m">Put in the rounds</h3>
-            <p>Pads, bags, drills and conditioning rounds. Repetition turns technique into habit and gives you the engine to use it.</p>
-            <div class="stage-links"><a href="programs.html#conditioning"><span class="tag">Fight Conditioning</span></a><a href="programs.html#womens"><span class="tag">Women’s Boxing</span></a></div>
-          </div>
-        </li>
-        <li class="stage" style="--c: var(--temper)" data-reveal data-reveal-delay="160">
-          <div class="stage-temp"><span class="num">03 · Temper</span><span class="deg">570°F</span><span class="label muted">Steel blue</span></div>
-          <div class="stage-body">
-            <h3 class="display d-m">Stay calm under fire</h3>
-            <p>Tempering trades brittleness for toughness. Coached sparring and fight IQ teach you to keep your shape when someone hits back.</p>
-            <div class="stage-links"><a href="programs.html#technical"><span class="tag">Technical Boxing</span></a><a href="programs.html#sparring"><span class="tag">Sparring Lab</span></a><a href="programs.html#fightteam"><span class="tag">Fight Team</span></a></div>
-          </div>
-        </li>
-      </ol>
+      <div class="stack" style="--stack: 28px">
+        <p class="big-copy" data-reveal>Forge Boxing is built to welcome <em>anyone with a genuine interest in the sport</em>, and to help people achieve their fitness goals.</p>
+        <p class="prose">First session or fiftieth, you train with the same coach and the same standard. Bring the effort; we’ll bring the rest.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ============ PROGRAMS ============ -->
-  <section class="section bg-deep seam" aria-labelledby="programs-title">
+  <section class="section bg-deep seam" aria-labelledby="how-title">
     <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow label">Programs</span>
-        <h2 class="display d-xl" id="programs-title" data-reveal-heat>Find your way in.</h2>
-        <p class="lead">Every class carries a heat rating, read the way a smith reads steel. Dull red is steady work. White-hot is as hard as we train.</p>
+      <div class="intro">
+        <div class="stack">
+          <span class="eyebrow label">How it works</span>
+          <h2 class="display d-l" id="how-title" data-reveal-heat>No contracts. Renew whenever you want.</h2>
+        </div>
+        <div class="stack" style="--stack: 32px">
+          <p class="big-copy" data-reveal>We offer simple, no-contract memberships. From a day, a week or a month to a whole year, we’re confident <em>we have a pass that’ll fit into your routine.</em></p>
+          <a class="btn btn-primary" href="membership.html">View memberships <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
       </div>
-      <div class="program-grid" data-reveal>
-        <a class="pcard" href="programs.html#foundations">
-          <div class="pcard-top"><span class="tag tag-hot">Beginner</span><span class="pcard-time tnum">60 min</span></div>
-          <div class="pcard-body"><h3 class="display d-m">Foundations</h3><p>Stance, footwork, the jab-cross and basic defense. Where every member starts.</p></div>
-          <div class="pcard-foot"><span class="heat" data-heat="2" role="img" aria-label="Heat 2 of 5, Cherry"><i></i><i></i><i></i><i></i><i></i></span><span class="label">Cherry · 1,500°F</span><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
-        <a class="pcard" href="programs.html#conditioning">
-          <div class="pcard-top"><span class="tag">All levels</span><span class="pcard-time tnum">45 min</span></div>
-          <div class="pcard-body"><h3 class="display d-m">Fight Conditioning</h3><p>Bag rounds, bodyweight circuits and fight-pace drills. No contact, plenty of sweat.</p></div>
-          <div class="pcard-foot"><span class="heat" data-heat="4" role="img" aria-label="Heat 4 of 5, Yellow"><i></i><i></i><i></i><i></i><i></i></span><span class="label">Yellow · 2,000°F</span><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
-        <a class="pcard" href="programs.html#technical">
-          <div class="pcard-top"><span class="tag">Intermediate</span><span class="pcard-time tnum">75 min</span></div>
-          <div class="pcard-body"><h3 class="display d-m">Technical Boxing</h3><p>Combinations, counters and ring craft, built on the pads with a coach.</p></div>
-          <div class="pcard-foot"><span class="heat" data-heat="3" role="img" aria-label="Heat 3 of 5, Orange"><i></i><i></i><i></i><i></i><i></i></span><span class="label">Orange · 1,750°F</span><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
-        <a class="pcard" href="programs.html#sparring">
-          <div class="pcard-top"><span class="tag">Coach approval</span><span class="pcard-time tnum">75 min</span></div>
-          <div class="pcard-body"><h3 class="display d-m">Sparring Lab</h3><p>Controlled, coached sparring with partners matched on size and experience.</p></div>
-          <div class="pcard-foot"><span class="heat" data-heat="5" role="img" aria-label="Heat 5 of 5, White"><i></i><i></i><i></i><i></i><i></i></span><span class="label">White · 2,300°F</span><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
-        <a class="pcard" href="programs.html#womens">
-          <div class="pcard-top"><span class="tag">All levels</span><span class="pcard-time tnum">60 min</span></div>
-          <div class="pcard-body"><h3 class="display d-m">Women’s Boxing</h3><p>Full boxing sessions coached by women, for women. Beginners are always welcome.</p></div>
-          <div class="pcard-foot"><span class="heat" data-heat="3" role="img" aria-label="Heat 3 of 5, Orange"><i></i><i></i><i></i><i></i><i></i></span><span class="label">Orange · 1,750°F</span><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
-        <a class="pcard" href="programs.html#youth">
-          <div class="pcard-top"><span class="tag">Ages 8–15</span><span class="pcard-time tnum">60 min</span></div>
-          <div class="pcard-body"><h3 class="display d-m">Youth Boxing</h3><p>Coordination, fitness and confidence. Structured, supervised and no head contact.</p></div>
-          <div class="pcard-foot"><span class="heat" data-heat="2" role="img" aria-label="Heat 2 of 5, Cherry"><i></i><i></i><i></i><i></i><i></i></span><span class="label">Cherry · 1,500°F</span><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
-        <a class="pcard pcard-wide" href="programs.html#private">
-          <div class="pcard-body"><div class="pcard-top" style="justify-content:flex-start"><span class="tag">1:1 or 2:1</span><span class="pcard-time tnum">From $85</span></div><h3 class="display d-m">Private Coaching</h3><p>Fast-track your technique, prepare for a bout or train around a busy schedule.</p></div>
-          <div class="pcard-foot"><span class="label">Book a session</span><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
+      <div class="amenities" data-reveal>
+        <div class="amenity"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11.5V7a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v6a4.5 4.5 0 0 1-3 4.2V21H8v-4a5 5 0 0 1-4-5 2 2 0 0 1 3-.5z"/><path d="M8 21h8M11 7.5h4.5"/></svg></span><h3>Boxing</h3><p>Technique, pad work and bag rounds, coached properly.</p></div>
+        <div class="amenity"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 6.5v11M3.5 9v6M17.5 6.5v11M20.5 9v6M6.5 12h11"/></svg></span><h3>Fitness</h3><p>Strength and conditioning to build a real engine.</p></div>
+        <div class="amenity"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9.5 17V7h3.5a3 3 0 0 1 0 6H9.5"/></svg></span><h3>Parking</h3><p>Park on site and walk straight in.</p></div>
+        <div class="amenity"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V7a4 4 0 0 1 7.5-2"/><path d="M9.5 8.5a4 4 0 0 1 7 0z"/><path d="M11 12v1M13 12.5v1M15 12v1M12 15.5v1M14 16v1M13 19v1"/></svg></span><h3>Showers</h3><p>Freshen up before you head back out.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ FIRST HOUR ============ -->
-  <section class="section" aria-labelledby="first-title">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow label">Your free class</span>
-        <h2 class="display d-l" id="first-title" data-reveal-heat>Your first hour, minute by minute.</h2>
-        <p class="lead">Nobody gets thrown in the deep end. This is exactly what happens when you book a free Foundations class.</p>
-      </div>
-      <ol class="first-hour" role="list" data-reveal>
-        <li class="fh-step" style="--c: var(--heat-1)"><span class="fh-clock">−15:00</span><h3>Arrive</h3><p>Check in at the desk. A coach wraps your hands and fits you with gloves.</p></li>
-        <li class="fh-step" style="--c: var(--heat-2)"><span class="fh-clock">00:00</span><h3>Warm up</h3><p>Skipping, shadowboxing and mobility to get you loose.</p></li>
-        <li class="fh-step" style="--c: var(--heat-3)"><span class="fh-clock">00:10</span><h3>Stance &amp; jab</h3><p>Feet, guard and your first punch. The coach checks every rep.</p></li>
-        <li class="fh-step" style="--c: var(--heat-4)"><span class="fh-clock">00:30</span><h3>Bag rounds</h3><p>Two-minute rounds putting the jab and cross together, a minute’s rest between.</p></li>
-        <li class="fh-step" style="--c: var(--heat-5)"><span class="fh-clock">00:50</span><h3>Core &amp; stretch</h3><p>Ten minutes of core work, then a proper cool-down.</p></li>
-        <li class="fh-step" style="--c: var(--temper)"><span class="fh-clock">01:00</span><h3>Talk it over</h3><p>Tell us how it felt and what you want from boxing. No hard sell.</p></li>
-      </ol>
-      <div class="cta-row" style="margin-top: clamp(40px, 5vw, 64px)">
-        <a class="btn btn-primary" href="contact.html">Book your free class <span class="arrow" aria-hidden="true">→</span></a>
-        <a class="link-arrow" href="contact.html#bring">What to bring <span class="arrow" aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TODAY ============ -->
-  <section class="section bg-raised seam" aria-labelledby="today-title">
+  <section class="section" aria-labelledby="today-title">
     <div class="wrap today">
       <div class="today-copy">
         <span class="eyebrow label">Live timetable</span>
-        <h2 class="display d-l" id="today-title" data-reveal-heat>Today at Forge.</h2>
-        <p class="lead">Pick a class, turn up ten minutes early and a coach will look after you. Beginner-friendly sessions run every day we’re open.</p>
+        <h2 class="display d-l" id="today-title" data-reveal-heat>Your next rounds.</h2>
+        <p class="lead"><span data-count-sessions>9</span> sessions a week, mornings and evenings. Turn up ten minutes early and warm up.</p>
         <dl class="hours">
-          <div data-days="1,2,3,4,5"><dt>Monday – Friday</dt><dd>6 AM – 9 PM</dd></div>
-          <div data-days="6"><dt>Saturday</dt><dd>8 AM – 2 PM</dd></div>
-          <div data-days="0"><dt>Sunday</dt><dd>9 AM – 12 PM</dd></div>
+          <div data-days="1,3,5"><dt>Mon · Wed · Fri</dt><dd>10–12 AM · 7–9 PM</dd></div>
+          <div data-days="2,4"><dt>Tue · Thu</dt><dd>10 AM – 12 PM</dd></div>
+          <div data-days="6"><dt>Saturday</dt><dd>4 – 6 PM</dd></div>
+          <div data-days="0"><dt>Sunday</dt><dd>Rest day</dd></div>
         </dl>
-        <div class="cta-row"><a class="link-arrow" href="schedule.html">Full weekly timetable <span class="arrow" aria-hidden="true">→</span></a></div>
+        <div class="cta-row"><a class="link-arrow" href="schedule.html">Full timetable <span class="arrow" aria-hidden="true">→</span></a></div>
       </div>
       <div class="board" data-today data-reveal>
-        <div class="board-head">
-          <h3 data-today-label>Today</h3>
-          <span data-open-status></span>
-        </div>
-        <ul class="board-list" data-today-list>
-          <li class="board-empty">Loading today’s classes…</li>
-        </ul>
-        <noscript><p class="board-empty">Turn on JavaScript to see today’s classes, or call (555) 010-4477.</p></noscript>
-        <div class="board-foot">
-          <span class="label muted">Bars show each class’s heat rating</span>
-          <a class="link-arrow" href="contact.html">Try one free <span class="arrow" aria-hidden="true">→</span></a>
-        </div>
+        <div class="board-head"><h3>Coming up</h3><span data-open-status></span></div>
+        <ul class="board-list" data-today-list><li class="board-empty">Loading sessions…</li></ul>
+        <div class="board-foot"><span class="label muted">Updates live</span><a class="link-arrow" href="membership.html">Join now <span class="arrow" aria-hidden="true">→</span></a></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ REASONS ============ -->
-  <section class="section" aria-labelledby="reasons-title">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow label">Why people walk in</span>
-        <h2 class="display d-l" id="reasons-title" data-reveal-heat>Everyone walks in for a reason.</h2>
-        <p class="lead">Most people who train here had never thrown a punch before their first class. Here’s where they usually start.</p>
+  <section class="section bg-raised seam" aria-labelledby="coach-title">
+    <div class="wrap intro">
+      <div class="portrait" data-reveal>
+        <img src="assets/img/coach-asanka.jpg" alt="Coach Asanka Rajapakshe" loading="lazy" onerror="this.remove()">
+        <span class="portrait-name">Asanka</span><span class="portrait-tag tag">Head coach</span><span class="portrait-initial" aria-hidden="true">A</span>
       </div>
-      <ul class="reasons" role="list">
-        <li><a class="reason" href="programs.html#conditioning"><h3>Get fit without the treadmill</h3><p><strong>Fight Conditioning</strong>45 minutes of rounds, circuits and bag work. You won’t be watching the clock.</p><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a class="reason" href="programs.html#foundations"><h3>Learn to handle yourself</h3><p><strong>Foundations</strong>Real technique from week one, taught slowly and properly.</p><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a class="reason" href="programs.html#sparring"><h3>Step into the ring</h3><p><strong>Sparring Lab &amp; Fight Team</strong>A clear path from your first spar to your first bout, at your pace.</p><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a class="reason" href="programs.html#womens"><h3>Train with other women</h3><p><strong>Women’s Boxing</strong>Three sessions a week, coached by Maya.</p><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a class="reason" href="programs.html#youth"><h3>Give your kid a focus</h3><p><strong>Youth Boxing</strong>Discipline, confidence and fitness for ages 8 to 15.</p><span class="arrow" aria-hidden="true">→</span></a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ COACHES ============ -->
-  <section class="section bg-deep seam" aria-labelledby="coaches-title">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow label">Coaches</span>
-        <h2 class="display d-xl" id="coaches-title" data-reveal-heat>Your corner.</h2>
-        <p class="lead">Six coaches who have boxed, competed and worked corners. They coach first-timers with exactly the same care.</p>
-      </div>
-      <div class="coach-grid">
-        <article class="coach" data-reveal>
-          <div class="portrait"><span class="portrait-name">Cruz</span><span class="portrait-tag tag">Orthodox</span><span class="portrait-initial" aria-hidden="true">D</span></div>
-          <div class="coach-meta">
-            <span class="role label">Founder · Head coach</span>
-            <h3>Dante Cruz</h3>
-            <p>64 amateur bouts. Opened Forge in 2019 to teach boxing the way he was taught.</p>
-          </div>
-          <div class="combo"><span class="label">Go-to combo</span><b>1</b><b>2</b><b>3</b><b>2</b></div>
-        </article>
-        <article class="coach" data-reveal data-reveal-delay="80">
-          <div class="portrait" style="--a: var(--heat-4); --b: var(--heat-3)"><span class="portrait-name">Okafor</span><span class="portrait-tag tag">Southpaw</span><span class="portrait-initial" aria-hidden="true">M</span></div>
-          <div class="coach-meta">
-            <span class="role label">Women’s boxing lead</span>
-            <h3>Maya Okafor</h3>
-            <p>Former regional amateur champion. Obsessed with defense and footwork.</p>
-          </div>
-          <div class="combo"><span class="label">Go-to combo</span><b>1</b><b>1</b><b>2</b><b>3</b></div>
-        </article>
-        <a class="coach-more" href="coaches.html" data-reveal data-reveal-delay="160">
-          <span class="label muted">Plus Rafa, Sam, Jonah &amp; Tessa</span>
-          <span class="display d-l">Meet the whole corner</span>
-          <span class="link-arrow">All six coaches <span class="arrow" aria-hidden="true">→</span></span>
-        </a>
+      <div class="stack" style="--stack: 26px">
+        <span class="eyebrow label">Meet the coach</span>
+        <h2 class="display d-l" id="coach-title" data-reveal-heat>Coach Asanka Rajapakshe</h2>
+        <p class="lead">National champion in 2007, 2011, 2012 and 2013. Commonwealth Games 2010. Head coach of the U19/U22 team at the 2024 Asian Games.</p>
+        <div class="champ"><b>IBA 1-Star</b><b>NVQ 4</b><b>Ministry of Sports L2</b></div>
+        <a class="link-arrow" href="coach.html">Full profile <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
-  <!-- ============ MEMBERSHIP TEASER ============ -->
-  <section class="section-tight" aria-labelledby="teaser-title">
-    <div class="wrap teaser">
-      <div class="stack">
-        <span class="eyebrow label">Membership</span>
-        <h2 class="display d-l" id="teaser-title">Simple plans. No joining fee.</h2>
-        <p class="lead">Pay monthly, cancel with 30 days’ notice and freeze for up to two months a year.</p>
-        <a class="link-arrow" href="membership.html">Compare every plan <span class="arrow" aria-hidden="true">→</span></a>
-      </div>
-      <div class="teaser-plans">
-        <a href="membership.html#plans"><span class="label muted">Forge 8</span><span class="amt">$129<small>/mo</small></span><p>Eight classes a month. Any program except Sparring Lab.</p></a>
-        <a class="is-featured" href="membership.html#plans"><span class="label" style="color: var(--heat-4)">Unlimited</span><span class="amt">$179<small>/mo</small></span><p>Every class, every day, plus Open Gym.</p></a>
-        <a href="membership.html#plans"><span class="label muted">Fight Team</span><span class="amt">$249<small>/mo</small></span><p>Unlimited plus sparring, fight prep and two private sessions.</p></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CLOSING CTA ============ -->
   <section class="fire" aria-labelledby="fire-title">
     <div class="wrap fire-grid">
-      <h2 class="display d-xxl" id="fire-title">Step into the fire.</h2>
+      <h2 class="display d-xl" id="fire-title">Let the pain forge you.</h2>
       <div class="fire-aside">
-        <p>Your first class is free. Gloves and wraps are on us. Bring water and something to sweat in.</p>
-        <a class="btn btn-ink" href="contact.html">Book your free class <span class="arrow" aria-hidden="true">→</span></a>
+        <p>No contracts and no excuses. Pick a membership and start this week.</p>
+        <a class="btn btn-ink" href="membership.html">See memberships <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
-
 </main>
 
 <footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-cta">
+      <p class="footer-slogan">Let the pain<br><span>forge</span> you.</p>
+      <div class="footer-cta-side">
+        <p>No contracts. Pick a membership, show up, and let the work do the rest.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="membership.html">Join Forge <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-steel" href="contact.html">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <a class="brand" href="index.html" aria-label="Forge Boxing Club home">
+      <a class="brand" href="index.html" aria-label="Forge Boxing & Fitness Academy home">
         <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="currentColor" d="M2 15.5C8 15.5 11 14 15 14H46V20H38C35 20 33 22 33 25V28L38 33V37H12V33L17 28V25C17 22 15 21 12 20.5C8 20 5 18 2 15.5Z"/><path fill="#ffb43f" d="M30 1L31.6 5.4L36 7L31.6 8.6L30 13L28.4 8.6L24 7L28.4 5.4Z"/></svg>
-        <span class="brand-word">Forge<span class="brand-sub">Boxing Club</span></span>
+        <span class="brand-word">Forge<span class="brand-sub">Fitness Academy</span></span>
       </a>
-      <p>A boxing club for first-timers, fitness chasers and fighters. Coached properly, every round, since 2019.</p>
+      <p>Boxing and fitness for anyone with a genuine interest in the sport. Coached by four-time national champion Asanka Rajapakshe.</p>
       <div class="socials">
         <a href="https://www.instagram.com/" aria-label="Forge on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://www.youtube.com/" aria-label="Forge on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9.2l5 2.8-5 2.8z" fill="currentColor" stroke="none"/></svg></a>
         <a href="https://www.facebook.com/" aria-label="Forge on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M14 21v-7h3l.5-3.5H14V8.8c0-1 .4-1.8 1.9-1.8H17.6V4a17 17 0 0 0-2.6-.2c-2.8 0-4.5 1.6-4.5 4.6v2.1H7.5V14h3v7"/></svg></a>
+        <a href="https://wa.me/94770000000" aria-label="Message Forge on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.8z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a4 4 0 0 1-2-2l1-1-1-2z" fill="currentColor" stroke="none"/></svg></a>
       </div>
     </div>
     <div class="footer-col">
-      <h2 class="label">Visit</h2>
-      <address>88 Foundry Road, Unit 4<br>Northside</address>
-      <ul>
-        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=88+Foundry+Road" rel="noopener">Get directions →</a></li>
-        <li><a href="tel:+15550104477">(555) 010-4477</a></li>
-        <li><a href="mailto:hello@forgeboxing.example">hello@forgeboxing.example</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h2 class="label">Hours</h2>
+      <h2 class="label">Training hours</h2>
       <dl class="hours">
-        <div data-days="1,2,3,4,5"><dt>Mon–Fri</dt><dd>6 AM – 9 PM</dd></div>
-        <div data-days="6"><dt>Saturday</dt><dd>8 AM – 2 PM</dd></div>
-        <div data-days="0"><dt>Sunday</dt><dd>9 AM – 12 PM</dd></div>
-      </dl>
+          <div data-days="1,3,5"><dt>Mon · Wed · Fri</dt><dd>10–12 AM · 7–9 PM</dd></div>
+          <div data-days="2,4"><dt>Tue · Thu</dt><dd>10 AM – 12 PM</dd></div>
+          <div data-days="6"><dt>Saturday</dt><dd>4 – 6 PM</dd></div>
+          <div data-days="0"><dt>Sunday</dt><dd>Rest day</dd></div>
+        </dl>
       <span data-open-status></span>
     </div>
     <div class="footer-col">
       <h2 class="label">Explore</h2>
       <ul>
-        <li><a href="programs.html">Programs</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="schedule.html">Timetable</a></li>
-        <li><a href="coaches.html">Coaches</a></li>
+        <li><a href="coach.html">Meet the Coach</a></li>
+        <li><a href="kids.html">Kids Classes</a></li>
         <li><a href="membership.html">Membership</a></li>
-        <li><a href="about.html">About the club</a></li>
-        <li><a href="contact.html">Book a free class</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h2 class="label">Get in touch</h2>
+      <ul>
+        <li><a href="tel:+94770000000">+94 77 000 0000</a></li>
+        <li><a href="mailto:hello@forgeboxing.example">hello@forgeboxing.example</a></li>
+        <li><a href="contact.html">Send a message →</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-mark" aria-hidden="true">Forge</div>
   <div class="wrap">
     <div class="footer-base">
-      <span>© <span data-year>2026</span> Forge Boxing Club. All rights reserved.</span>
+      <span>© <span data-year>2026</span> Forge Boxing & Fitness Academy. All rights reserved.</span>
       <a href="#main">Back to top ↑</a>
     </div>
   </div>
@@ -561,6 +425,7 @@
 
 <script src="assets/js/data.js" defer></script>
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/preloader.js" defer></script>
 <script src="assets/js/schedule.js" defer></script>
 <script src="assets/js/embers.js" defer></script>
 <script src="assets/js/bag.js" defer></script>

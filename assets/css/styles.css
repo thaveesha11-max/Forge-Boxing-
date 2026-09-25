@@ -2028,7 +2028,6 @@ select.input {
     scroll-behavior: auto !important;
   }
   .js [data-reveal].is-pending { transform: none; }
-  .marquee-track { animation: none; }
 }
 
 @media print {
@@ -2268,3 +2267,6 @@ select.input {
 .wk-bar em { color: #fff; }
 .status.is-open::before { background: #e10600; }
 ::selection { background: #e10600; color: #fff; }
+
+/* Keep the punch marquee moving for everyone */
+.marquee-track { animation: marquee 42s linear infinite !important; animation-duration: 42s !important; animation-iteration-count: infinite !important; }

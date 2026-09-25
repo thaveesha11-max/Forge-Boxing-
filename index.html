@@ -105,8 +105,12 @@
 </div>
 
 <main id="main">
+  <section class="video-strip" aria-label="Training at Forge">
+    <video class="strip-bg" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg" aria-hidden="true" tabindex="-1"><source src="assets/video/hero.webm" type="video/webm"><source src="assets/video/hero.mp4" type="video/mp4"></video>
+    <video class="strip-video" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg" aria-hidden="true" tabindex="-1"><source src="assets/video/hero.webm" type="video/webm"><source src="assets/video/hero.mp4" type="video/mp4"></video>
+  </section>
+
   <section class="hero" aria-labelledby="hero-title">
-    <video class="hero-video" src="assets/video/hero.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video>
     <div class="hero-photo" aria-hidden="true"></div>
     <canvas class="hero-canvas" data-embers aria-hidden="true"></canvas>
     <div class="wrap">
@@ -125,121 +129,6 @@
             <a class="btn btn-primary" href="membership.html">View memberships <span class="arrow" aria-hidden="true">→</span></a>
             <a class="btn btn-steel" href="schedule.html">See the timetable</a>
           </div>
-        </div>
-        <div class="bag-stage" data-bag role="group" aria-label="Interactive heavy bag">
-          <svg class="bag-svg" viewBox="0 0 320 760" aria-hidden="true" focusable="false">
-            <defs>
-              <linearGradient id="chainG" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0" stop-color="#2a323a"/>
-                <stop offset=".45" stop-color="#b4bec7"/>
-                <stop offset=".6" stop-color="#7c8792"/>
-                <stop offset="1" stop-color="#1e252c"/>
-              </linearGradient>
-              <linearGradient id="bagG" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0" stop-color="#050709"/>
-                <stop offset=".14" stop-color="#171c21"/>
-                <stop offset=".3" stop-color="#2e353d"/>
-                <stop offset=".42" stop-color="#1f252b"/>
-                <stop offset=".72" stop-color="#0d1013"/>
-                <stop offset=".9" stop-color="#1a0003"/>
-                <stop offset=".97" stop-color="#5a0008"/>
-                <stop offset="1" stop-color="#9a0012"/>
-              </linearGradient>
-              <linearGradient id="bagShade" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0" stop-color="#000" stop-opacity=".5"/>
-                <stop offset=".1" stop-color="#000" stop-opacity="0"/>
-                <stop offset=".82" stop-color="#000" stop-opacity="0"/>
-                <stop offset="1" stop-color="#000" stop-opacity=".55"/>
-              </linearGradient>
-              <linearGradient id="capG" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0" stop-color="#0c0f12"/>
-                <stop offset=".35" stop-color="#3a424b"/>
-                <stop offset=".75" stop-color="#1a1f25"/>
-                <stop offset="1" stop-color="#6a000c"/>
-              </linearGradient>
-              <linearGradient id="hl" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-                <stop offset=".35" stop-color="#fff" stop-opacity=".09"/>
-                <stop offset=".7" stop-color="#fff" stop-opacity=".05"/>
-                <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-              </linearGradient>
-              <radialGradient id="shadowG">
-                <stop offset="0" stop-color="#000" stop-opacity=".7"/>
-                <stop offset="1" stop-color="#000" stop-opacity="0"/>
-              </radialGradient>
-              <linearGradient id="fadeG" gradientUnits="userSpaceOnUse" x1="0" y1="-20" x2="0" y2="110">
-                <stop offset="0" stop-color="#000"/>
-                <stop offset="1" stop-color="#fff"/>
-              </linearGradient>
-              <mask id="chainFade" maskUnits="userSpaceOnUse" x="-400" y="-80" width="1120" height="400">
-                <rect x="-400" y="-80" width="1120" height="400" fill="url(#fadeG)"/>
-              </mask>
-            </defs>
-
-            <ellipse id="bag-shadow" cx="0" cy="0" rx="86" ry="9" transform="translate(160 748)" fill="url(#shadowG)"/>
-
-            <g id="bag-pivot">
-              <g mask="url(#chainFade)">
-                <ellipse cx="160" cy="-34" rx="8.5" ry="13" fill="none" stroke="url(#chainG)" stroke-width="4.5"/>
-                <rect x="157.5" y="-27" width="5" height="30" rx="2.5" fill="url(#chainG)"/>
-                <ellipse cx="160" cy="10" rx="8.5" ry="13" fill="none" stroke="url(#chainG)" stroke-width="4.5"/>
-                <rect x="157.5" y="17" width="5" height="30" rx="2.5" fill="url(#chainG)"/>
-                <ellipse cx="160" cy="54" rx="8.5" ry="13" fill="none" stroke="url(#chainG)" stroke-width="4.5"/>
-                <rect x="157.5" y="61" width="5" height="30" rx="2.5" fill="url(#chainG)"/>
-                <ellipse cx="160" cy="98" rx="8.5" ry="13" fill="none" stroke="url(#chainG)" stroke-width="4.5"/>
-                <rect x="157.5" y="105" width="5" height="30" rx="2.5" fill="url(#chainG)"/>
-                <ellipse cx="160" cy="142" rx="8.5" ry="13" fill="none" stroke="url(#chainG)" stroke-width="4.5"/>
-              </g>
-              <circle cx="160" cy="163" r="7" fill="none" stroke="url(#chainG)" stroke-width="4.5"/>
-              <rect x="153" y="168" width="14" height="20" rx="3" fill="url(#chainG)"/>
-              <circle cx="160" cy="196" r="9" fill="none" stroke="url(#chainG)" stroke-width="5"/>
-
-              <g id="bag-body">
-                <path d="M80 250V700A80 18 0 0 0 240 700V250Z" fill="url(#bagG)"/>
-                <path d="M80 250V700A80 18 0 0 0 240 700V250Z" fill="url(#bagShade)"/>
-                <rect x="104" y="268" width="10" height="428" rx="5" fill="url(#hl)"/>
-                <path d="M80 330A80 14 0 0 0 240 330" fill="none" stroke="#040506" stroke-width="2.5"/>
-                <path d="M80 336A80 14 0 0 0 240 336" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="1" stroke-dasharray="3 5"/>
-                <path d="M80 566A80 14 0 0 0 240 566" fill="none" stroke="#040506" stroke-width="2.5"/>
-                <path d="M80 560A80 14 0 0 0 240 560" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="1" stroke-dasharray="3 5"/>
-                <path d="M80 646A80 14 0 0 0 240 646" fill="none" stroke="#040506" stroke-width="2.5"/>
-                <path d="M80 652A80 14 0 0 0 240 652" fill="none" stroke="#fff" stroke-opacity=".1" stroke-width="1" stroke-dasharray="3 5"/>
-                <text x="0" y="0" transform="translate(188 448) rotate(-90)" text-anchor="middle" font-family="Forge Stencil, Forge Display, Impact, sans-serif" font-weight="900" font-size="80" letter-spacing="5" fill="#e10600">FORGE</text>
-                <text x="160" y="610" text-anchor="middle" font-family="Forge Text, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="#6f7984">HEAVY · 100 LB</text>
-                <path d="M80 700A80 18 0 0 0 240 700" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="1.5"/>
-                <ellipse cx="160" cy="250" rx="80" ry="16" fill="url(#capG)" stroke="#07090b" stroke-width="1.5"/>
-                <ellipse cx="160" cy="250" rx="58" ry="10.5" fill="none" stroke="#fff" stroke-opacity=".07" stroke-width="1"/>
-              </g>
-
-              <g stroke-linecap="round">
-                <line x1="160" y1="203" x2="104" y2="239" stroke="#1d2329" stroke-width="6"/>
-                <line x1="160" y1="203" x2="216" y2="239" stroke="#1d2329" stroke-width="6"/>
-                <line x1="160" y1="203" x2="104" y2="261" stroke="#343d46" stroke-width="7"/>
-                <line x1="160" y1="203" x2="216" y2="261" stroke="#343d46" stroke-width="7"/>
-                <line x1="160" y1="203" x2="104" y2="261" stroke="#0b0e11" stroke-width="1" stroke-dasharray="2 4"/>
-                <line x1="160" y1="203" x2="216" y2="261" stroke="#0b0e11" stroke-width="1" stroke-dasharray="2 4"/>
-              </g>
-              <rect x="99" y="256" width="10" height="10" rx="2" fill="#8d97a1"/>
-              <rect x="211" y="256" width="10" height="10" rx="2" fill="#5d6873"/>
-              <rect x="100" y="235" width="8" height="8" rx="2" fill="#4a545e"/>
-              <rect x="212" y="235" width="8" height="8" rx="2" fill="#3b4652"/>
-            </g>
-          </svg>
-          <canvas class="bag-sparks" aria-hidden="true"></canvas>
-
-          <div class="bag-hud">
-            <p class="bag-call" data-bag-call aria-hidden="true"></p>
-            <dl class="bag-readout">
-              <dt>Impact</dt><dd><b data-bag-force>0</b> N</dd>
-              <dt>Combo</dt><dd data-bag-combo>×0</dd>
-              <dt>Best</dt><dd data-bag-best>—</dd>
-            </dl>
-          </div>
-          <div class="bag-hint">
-            <button class="btn btn-steel btn-sm" type="button" data-bag-punch>Throw a punch</button>
-            <span class="label muted">or hit the bag</span>
-          </div>
-          <p class="sr-only" aria-live="polite" data-bag-live></p>
         </div>
       </div>
       <div class="hero-stats">
@@ -429,6 +318,5 @@
 <script src="assets/js/preloader.js" defer></script>
 <script src="assets/js/schedule.js" defer></script>
 <script src="assets/js/embers.js" defer></script>
-<script src="assets/js/bag.js" defer></script>
 </body>
 </html>

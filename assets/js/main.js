@@ -8,6 +8,22 @@
   root.classList.add("js");
 
   /* ---------------------------------------------------------------
+     Preloader: hold at least 1.6 s so the hammer lands, then fade
+     --------------------------------------------------------------- */
+  var pre = document.querySelector("[data-preloader]");
+  if (pre && !root.classList.contains("no-preloader")) {
+    var started = Date.now();
+    var hide = function () {
+      window.setTimeout(function () {
+        pre.classList.add("is-done");
+      }, Math.max(0, 1600 - (Date.now() - started)));
+    };
+    if (document.readyState === "complete") hide();
+    else window.addEventListener("load", hide);
+    window.setTimeout(function () { pre.classList.add("is-done"); }, 5000);
+  }
+
+  /* ---------------------------------------------------------------
      Shared helpers (used by schedule.js and forms.js too)
      --------------------------------------------------------------- */
   var DAY = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];

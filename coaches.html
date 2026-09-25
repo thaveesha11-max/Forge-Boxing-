@@ -25,6 +25,23 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+<div class="preloader" data-preloader aria-hidden="true">
+  <div class="preloader-inner">
+    <p class="preloader-text">Let the pain <span>forge</span> you</p>
+    <svg class="preloader-forge" viewBox="0 0 120 80" focusable="false">
+      <g class="pl-sparks" stroke="#ff3b2f" stroke-width="1.6" stroke-linecap="round">
+        <path d="M58 36l-8-10"/><path d="M62 36l6-12"/><path d="M55 38l-12-4"/><path d="M65 38l12-5"/><path d="M60 35v-12"/>
+      </g>
+      <g class="pl-hammer">
+        <rect x="58" y="4" width="4" height="34" rx="2" fill="#6b4a36"/>
+        <rect x="48" y="30" width="24" height="11" rx="2" fill="#8d97a1"/>
+        <rect x="48" y="30" width="24" height="3" rx="1" fill="#c3cbd2"/>
+      </g>
+      <path transform="translate(33 38) scale(1.1)" fill="#56616c" d="M2 15.5C8 15.5 11 14 15 14H46V20H38C35 20 33 22 33 25V28L38 33V37H12V33L17 28V25C17 22 15 21 12 20.5C8 20 5 18 2 15.5Z"/>
+    </svg>
+  </div>
+</div>
+<script>try{if(sessionStorage.getItem("forge-intro"))document.documentElement.classList.add("no-preloader");sessionStorage.setItem("forge-intro","1")}catch(e){}</script>
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site-header" data-header>

@@ -2011,6 +2011,45 @@ select.input {
 .ko-count.tick { animation: tick 0.5s var(--ease-out); }
 @keyframes tick { from { transform: scale(1.18); color: var(--heat-5); } }
 
+
+/* ------------------------------------------------------------------
+   Preloader — shown on the first page load of each visit
+   ------------------------------------------------------------------ */
+.preloader {
+  position: fixed; inset: 0; z-index: 300;
+  display: grid; place-items: center;
+  background: #000;
+  transition: opacity 0.7s var(--ease-out), visibility 0s linear 0.7s;
+}
+.preloader.is-done, .no-preloader .preloader { opacity: 0; visibility: hidden; }
+.no-preloader .preloader { display: none; }
+.preloader-inner { display: grid; justify-items: center; gap: 28px; padding: 24px; text-align: center; }
+.preloader-text {
+  font-family: var(--f-stencil); font-weight: 900; text-transform: uppercase;
+  font-size: clamp(2.4rem, 8vw, 5.5rem); line-height: 0.9; letter-spacing: 0.02em;
+  color: #b3001b; text-shadow: 0 0 24px rgba(179, 0, 27, 0.55), 0 2px 0 #4a0009;
+  animation: pl-pulse 0.9s ease-in-out infinite;
+}
+.preloader-text span { color: #e0102e; }
+.preloader-forge { width: 120px; height: 80px; overflow: visible; }
+.pl-hammer { transform-origin: 60px 6px; transform-box: view-box; animation: pl-strike 0.9s cubic-bezier(.5,0,.75,0) infinite; }
+.pl-sparks { opacity: 0; transform-origin: 60px 38px; transform-box: view-box; animation: pl-spark 0.9s linear infinite; }
+@keyframes pl-strike {
+  0%, 100% { transform: rotate(-55deg); }
+  45% { transform: rotate(0deg); }
+  55% { transform: rotate(-8deg); }
+}
+@keyframes pl-spark {
+  0%, 44% { opacity: 0; transform: scale(0.4); }
+  48% { opacity: 1; transform: scale(1); }
+  70%, 100% { opacity: 0; transform: scale(1.5); }
+}
+@keyframes pl-pulse { 0%, 100% { opacity: 1; } 48% { opacity: 1; } 52% { opacity: 0.75; } }
+@media (prefers-reduced-motion: reduce) {
+  .pl-hammer { animation: none; transform: none; }
+  .pl-sparks { animation: none; opacity: 1; }
+}
+
 /* ------------------------------------------------------------------
    Reveal on scroll — content is always visible; motion only settles it
    ------------------------------------------------------------------ */

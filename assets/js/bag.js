@@ -66,7 +66,7 @@
 
   function heatColor(k, alpha) {
     // white-hot → yellow → orange → cherry as a spark cools
-    var stops = [[255, 241, 207], [255, 180, 63], [242, 107, 29], [201, 56, 31]];
+    var stops = [[255, 255, 255], [255, 90, 90], [225, 6, 0], [140, 0, 15]];
     var f = Math.min(2.999, k * 3);
     var i = Math.floor(f), t = f - i, a = stops[i], b = stops[i + 1];
     return "rgba(" + Math.round(a[0] + (b[0] - a[0]) * t) + "," + Math.round(a[1] + (b[1] - a[1]) * t) + "," + Math.round(a[2] + (b[2] - a[2]) * t) + "," + alpha + ")";
@@ -85,14 +85,14 @@
       if (k >= 1) { flashes.splice(i, 1); continue; }
       var r = 8 + k * 70;
       var g = ctx.createRadialGradient(f.x, f.y, 0, f.x, f.y, r);
-      g.addColorStop(0, "rgba(255,241,207," + (1 - k) * 0.9 + ")");
-      g.addColorStop(0.35, "rgba(255,180,63," + (1 - k) * 0.45 + ")");
-      g.addColorStop(1, "rgba(242,107,29,0)");
+      g.addColorStop(0, "rgba(255,255,255," + (1 - k) * 0.9 + ")");
+      g.addColorStop(0.35, "rgba(255,60,60," + (1 - k) * 0.45 + ")");
+      g.addColorStop(1, "rgba(225,6,0,0)");
       ctx.fillStyle = g;
       ctx.beginPath();
       ctx.arc(f.x, f.y, r, 0, 6.2832);
       ctx.fill();
-      ctx.strokeStyle = "rgba(255,180,63," + (1 - k) * 0.7 + ")";
+      ctx.strokeStyle = "rgba(255,60,60," + (1 - k) * 0.7 + ")";
       ctx.lineWidth = 2;
       ctx.beginPath();
       ctx.arc(f.x, f.y, 10 + k * 90, 0, 6.2832);

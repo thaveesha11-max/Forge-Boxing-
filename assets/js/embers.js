@@ -12,10 +12,10 @@
   var running = false, onScreen = true, raf = 0;
   // Hot → cool, the way a spark fades
   var HOT = [
-    [255, 241, 207],
-    [255, 180, 63],
-    [242, 107, 29],
-    [201, 56, 31],
+    [255, 255, 255],
+    [255, 90, 90],
+    [225, 6, 0],
+    [140, 0, 15],
   ];
 
   function resize() {

@@ -4,8 +4,8 @@
   "description": "Real boxing, coached by people who have fought. First class free.",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#0e1215",
-  "theme_color": "#0e1215",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
   "icons": [
     {
       "src": "assets/img/icon-192.png",

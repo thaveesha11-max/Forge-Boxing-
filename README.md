@@ -13,11 +13,15 @@ A fast, hand-built marketing site for **Forge**, a boxing gym. Seven pages plus 
 | `coach.html` | Meet the Coach: Asanka Rajapakshe's qualifications, career highlights and a photo gallery. |
 | `membership.html` | Plans (8 / 12 / 12+ days a month), kids classes, private sessions, the contact form and FAQ. Buttons elsewhere link to `membership.html#kids` and `#contact`. |
 
+| `gallery.html` | Photo and video gallery: 14 photo slots and 4 video slots with filters and a full-screen viewer. |
+
 `404.html` is the error page.
 
 Every page opens with a cosmic, blood-red "Let the pain forge you" preloader (about 4 seconds, once per visit).
 
 ## Add your photos
+
+**Gallery page:** put files in `assets/gallery/` named `photo-1.jpg` … `photo-14.jpg` and `video-1.mp4` … `video-4.mp4`. Each one fills its slot automatically; empty slots show a placeholder.
 
 Drop these files into `assets/img/` and they appear automatically. Until then, the site shows designed placeholders.
 

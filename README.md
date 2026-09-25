@@ -97,14 +97,14 @@ Any service that accepts a JSON `POST` works (Formspree, Basin, Getform, your ow
 ### File map
 
 ```
-index.html  programs.html  schedule.html  coaches.html
-membership.html  about.html  contact.html  404.html
+index.html  schedule.html  coach.html  membership.html  404.html
 assets/
   css/styles.css        design tokens and all components
   js/data.js            timetable, hours, programs, coaches, form settings
-  js/main.js            header, menu, reveals, open-now status, pricing toggle, floor plan
-  js/schedule.js        timetable, today board, next sessions, class picker
-  js/forms.js           booking form
+  js/main.js            header, menu, reveals, live session status, preloader timing
+  js/preloader.js       cosmic starfield and blood drips
+  js/schedule.js        timetable cards, week chart, home session board
+  js/forms.js           contact form
   js/embers.js          hero ember particles
   js/bag.js             interactive heavy bag
   fonts/                self-hosted variable fonts + licences

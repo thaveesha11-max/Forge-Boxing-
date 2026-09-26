@@ -13,8 +13,8 @@ FORGE.config = {
   // email app with the message filled in instead.
   formEndpoint: "",
   email: "hello@forgeboxing.example",
-  phone: "+94770000000",
-  phoneDisplay: "+94 77 000 0000",
+  phone: "+94774220045",
+  phoneDisplay: "+94 77 422 0045",
   currency: "LKR",
 };
 

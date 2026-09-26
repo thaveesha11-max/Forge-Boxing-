@@ -63,7 +63,7 @@ The content is written to be realistic, but the business details are placeholder
 
 | Placeholder | Where it appears |
 | --- | --- |
-| `www.forgeboxing.example` (domain) | `<head>` of every page, the JSON-LD block in `index.html`, `sitemap.xml`, `robots.txt` |
+| `forgeboxing.fit` (domain) | `<head>` of every page, the JSON-LD block in `index.html`, `sitemap.xml`, `robots.txt` |
 | `hello@forgeboxing.example` | `assets/js/data.js`, footer, contact page, JSON-LD |
 | `+94 77 000 0000` / `+94770000000` | `assets/js/data.js`, footer, mobile menu, contact page, membership FAQ, timetable page, JSON-LD |
 | Address | Not on the site yet. Add it to the footer and the contact section of `membership.html`, and to `address` in the JSON-LD in `index.html` |

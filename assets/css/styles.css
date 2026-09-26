@@ -2385,3 +2385,8 @@ select.input {
 .bg-raised .plan-flag, .bg-raised .tag-hot { background: #e10600; color: #fff; }
 .bg-raised .portrait-name { color: #fff; }
 .bg-raised .copy-btn { color: #444; border-color: #ccc; }
+
+/* Coach gallery: keep faces in frame */
+.gallery figure:nth-child(1) img { object-position: center 30%; }
+.gallery figure:nth-child(2) img { object-position: center 12%; }
+.gallery figure:nth-child(5) img { object-position: center 45%; }

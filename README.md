@@ -19,9 +19,13 @@ A fast, hand-built marketing site for **Forge**, a boxing gym. Seven pages plus 
 
 Every page opens with a cosmic, blood-red "Let the pain forge you" preloader (about 4 seconds, once per visit).
 
+## Logo
+
+The header and footer show `assets/img/logo-forge.png`. Replace that file (keep the name) to change it.
+
 ## Home page video
 
-The strip under the menu plays `assets/video/hero.webm` (or `hero.mp4` as a fallback) muted and on a loop, with `hero-poster.jpg` shown while it loads. To swap the video, replace those three files and keep the names.
+The strip under the menu plays `assets/video/hero.mp4` (or `hero.webm` as a fallback) muted and on a loop, with `hero-poster.jpg` shown while it loads. To swap the video, replace those three files and keep the names.
 
 ## Add your photos
 

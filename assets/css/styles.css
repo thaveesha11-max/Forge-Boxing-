@@ -2362,3 +2362,26 @@ select.input {
 /* Footer slogan: give the two lines room so the glow doesn't bleed */
 .footer-slogan { line-height: 1; }
 .footer-slogan span { text-shadow: 0 0 18px rgba(255, 26, 26, 0.3); }
+
+/* ==================================================================
+   Logo image, landscape video strip, more white
+   ================================================================== */
+.brand-logo { display: block; height: 60px; width: auto; max-width: none; mix-blend-mode: screen; }
+.site-footer .brand-logo { height: 84px; }
+@media (max-width: 560px) { .brand-logo { height: 44px; } }
+.video-strip { height: auto; aspect-ratio: 16 / 7; min-height: 320px; max-height: 86vh; }
+.strip-video { object-fit: cover; object-position: center; }
+@media (max-width: 700px) { .video-strip { aspect-ratio: 4 / 3; height: auto; min-height: 260px; } .strip-video { object-fit: cover; object-position: center; } }
+
+/* Readability inside white sections */
+.bg-raised .board, .bg-raised .day, .bg-raised .plan, .bg-raised .creds, .bg-raised .form-card { box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.25); }
+.bg-raised .input { background: #fff; color: #0a0a0a; }
+.bg-raised .input::placeholder { color: #8a8a8a; }
+.bg-raised .slot { background: #fafafa; }
+.bg-raised .day.is-rest { background: repeating-linear-gradient(135deg, #f6f6f6 0 10px, #ffffff 10px 20px); }
+.bg-raised .cal i { background: #e6e6e6; }
+.bg-raised .cal i.on { background: #e10600; }
+.bg-raised .plan.is-featured { background: radial-gradient(120% 60% at 100% 0%, rgba(225, 6, 0, 0.08), transparent 60%), #fff; }
+.bg-raised .plan-flag, .bg-raised .tag-hot { background: #e10600; color: #fff; }
+.bg-raised .portrait-name { color: #fff; }
+.bg-raised .copy-btn { color: #444; border-color: #ccc; }

@@ -2388,5 +2388,5 @@ select.input {
 
 /* Coach gallery: keep faces in frame */
 .gallery img[src$="gallery-2.jpg"] { object-position: center 12%; }
-.gallery img[src$="gallery-5.jpg"] { object-position: center 45%; }
+
 .gslot img[src$="photo-1.jpg"] { object-position: center 30%; }

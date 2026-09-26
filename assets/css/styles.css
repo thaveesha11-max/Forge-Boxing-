@@ -2390,3 +2390,9 @@ select.input {
 .gallery img[src$="gallery-2.jpg"] { object-position: center 12%; }
 
 .gslot img[src$="photo-1.jpg"] { object-position: center 30%; }
+
+/* Preloader: plain black, spaced lettering */
+.preloader { background: #000; }
+.pl-word { letter-spacing: 0.18em; margin-right: -0.18em; }
+.pl-big { letter-spacing: 0.14em; margin-right: -0.14em; }
+.pl-text { gap: clamp(12px, 2.2vw, 26px); }
